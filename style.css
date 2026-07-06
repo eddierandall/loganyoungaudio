@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0A0A0A;
+  color: #E8E8E8;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+a { color: inherit; }
+
+/* Nav */
+.lya-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  border-bottom: 0.5px solid #222;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.lya-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  color: #E8E8E8;
+  text-decoration: none;
+}
+.lya-logo span { color: #C8FF00; }
+.lya-nav-links { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
+.lya-nav-links a { color: #888; text-decoration: none; font-size: 13px; letter-spacing: 0.04em; }
+.lya-nav-links a:hover { color: #C8FF00; }
+.lya-nav-links a.active { color: #C8FF00; }
+.lya-btn-nav {
+  background: #C8FF00;
+  color: #0A0A0A;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+}
+.lya-btn-nav:hover { opacity: 0.85; }
+
+/* Divider */
+.lya-rule { width: 100%; height: 1px; background: #1A1A1A; position: relative; }
+.lya-rule::after { content: ''; position: absolute; left: 0; top: 0; width: 80px; height: 1px; background: #C8FF00; }
+
+/* Page header */
+.lya-page-header { padding: 48px 40px 8px; }
+.lya-eyebrow { color: #C8FF00; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+.lya-page-header h1 { font-family: 'Bebas Neue', sans-serif; font-size: 44px; margin-bottom: 10px; line-height: 1; }
+.lya-page-header p { color: #999; max-width: 480px; }
+
+/* Buttons */
+.lya-btn-primary {
+  display: inline-block;
+  background: #C8FF00;
+  color: #0A0A0A;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  margin-right: 14px;
+}
+.lya-btn-primary:hover { opacity: 0.85; }
+.lya-btn-ghost {
+  display: inline-block;
+  color: #E8E8E8;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 10px;
+  border-bottom: 1px solid #333;
+}
+.lya-btn-dark {
+  background: #0A0A0A;
+  color: #C8FF00;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 15px 32px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.lya-btn-dark:hover { opacity: 0.85; }
+
+/* Sections */
+.lya-section { padding: 48px 40px; }
+.lya-section-label { color: #C8FF00; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px; }
+
+/* Philosophy / info items */
+.lya-phil-items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.lya-phil-item { border-left: 2px solid #C8FF00; border-radius: 0; padding-left: 16px; }
+.lya-phil-item h3 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+.lya-phil-item p { color: #999; font-size: 13.5px; }
+
+/* CTA strip */
+.lya-cta-strip {
+  background: #C8FF00;
+  padding: 48px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.lya-cta-strip h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 38px;
+  line-height: 1;
+  color: #0A0A0A;
+  max-width: 460px;
+}
+
+/* Footer */
+.lya-footer {
+  padding: 28px 40px;
+  border-top: 0.5px solid #1A1A1A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.lya-footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 15px; letter-spacing: 0.08em; color: #444; }
+.lya-footer p { font-size: 12px; color: #444; }
+.lya-footer-links { display: flex; gap: 18px; }
+.lya-footer-links a { font-size: 12px; color: #444; text-decoration: none; }
+.lya-footer-links a:hover { color: #C8FF00; }
+
+/* ============ HOME ============ */
+.lya-hero { padding: 64px 40px 40px; }
+.lya-hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: 56px; line-height: 0.98; letter-spacing: 0.01em; }
+.lya-hero h1 em { color: #C8FF00; font-style: normal; }
+.lya-hero p { max-width: 480px; color: #999; margin: 20px 0 28px; font-size: 15px; }
+.lya-video-wrap {
+  margin: 0 40px 40px;
+  position: relative;
+  background: #111;
+  border: 0.5px solid #222;
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.lya-video-wrap video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.lya-video-caption {
+  position: absolute;
+  bottom: 16px;
+  left: 20px;
+  font-size: 12px;
+  color: #C8FF00;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(10,10,10,0.7);
+  padding: 6px 12px;
+}
+.lya-phil-heading { font-family: 'Bebas Neue', sans-serif; font-size: 34px; margin-bottom: 32px; }
+
+/* ============ PRODUCTS ============ */
+.lya-grid-section { padding: 24px 40px 56px; }
+.lya-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.lya-card {
+  background: #111;
+  border: 0.5px solid #222;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s;
+}
+.lya-card:hover { border-color: #C8FF00; }
+.lya-card.soon { opacity: 0.55; cursor: default; }
+.lya-card.soon:hover { border-color: #333; }
+.lya-card-thumb {
+  background: #0A0A0A;
+  aspect-ratio: 1.6/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 16px;
+}
+.lya-card-thumb-text { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: #333; letter-spacing: 0.06em; }
+.lya-card-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  background: #C8FF00;
+  color: #0A0A0A;
+  font-weight: 600;
+}
+.lya-card-badge.soon { background: #222; color: #888; }
+.lya-card-category { font-size: 11px; color: #C8FF00; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; }
+.lya-card.soon .lya-card-category { color: #666; }
+.lya-card-title { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.02em; margin-bottom: 6px; }
+.lya-card-tagline { color: #999; font-size: 13px; margin-bottom: 16px; flex-grow: 1; }
+.lya-card-meta { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+.lya-pill { font-size: 10.5px; color: #666; padding: 3px 9px; border: 0.5px solid #2A2A2A; letter-spacing: 0.04em; }
+.lya-card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 0.5px solid #1E1E1E; padding-top: 14px; }
+.lya-card-price { font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: #C8FF00; letter-spacing: 0.02em; }
+.lya-card.soon .lya-card-price { color: #555; }
+.lya-card-arrow { font-size: 17px; color: #444; }
+
+/* ============ ABOUT ============ */
+.lya-lede { padding: 8px 40px 40px; }
+.lya-lede p { max-width: 560px; color: #C8C8C8; font-size: 17px; line-height: 1.8; }
+.lya-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.lya-two-col h2 { font-family: 'Bebas Neue', sans-serif; font-size: 30px; margin-bottom: 14px; }
+.lya-two-col p { color: #999; font-size: 14px; }
+
+/* ============ CONTACT ============ */
+.lya-contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 32px 40px 56px; }
+.lya-field { margin-bottom: 18px; }
+.lya-field label { display: block; font-size: 12px; color: #888; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 8px; }
+.lya-field input, .lya-field textarea {
+  width: 100%;
+  background: #111;
+  border: 0.5px solid #2A2A2A;
+  color: #E8E8E8;
+  padding: 12px 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+.lya-field textarea { min-height: 110px; resize: vertical; }
+.lya-field input:focus, .lya-field textarea:focus { outline: none; border-color: #C8FF00; }
+.lya-info-block { border-left: 2px solid #C8FF00; border-radius: 0; padding-left: 18px; margin-bottom: 28px; }
+.lya-info-block h3 { font-size: 14px; font-weight: 600; margin-bottom: 6px; letter-spacing: 0.02em; }
+.lya-info-block p { color: #999; font-size: 13.5px; }
+.lya-info-block a { color: #C8FF00; text-decoration: none; }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 700px) {
+  .lya-hero h1 { font-size: 40px; }
+  .lya-phil-items { grid-template-columns: 1fr; }
+  .lya-two-col { grid-template-columns: 1fr; }
+  .lya-contact-wrap { grid-template-columns: 1fr; padding: 24px 24px 40px; }
+  .lya-cta-strip { flex-direction: column; align-items: flex-start; }
+  .lya-nav, .lya-hero, .lya-page-header, .lya-section, .lya-footer, .lya-grid-section, .lya-lede { padding-left: 20px; padding-right: 20px; }
+  .lya-video-wrap { margin-left: 20px; margin-right: 20px; }
+}
