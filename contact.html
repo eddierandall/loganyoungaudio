@@ -4,73 +4,80 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Logan Young Audio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="lya-nav">
-  <a href="index.html" class="lya-logo">Logan Young <span>Audio</span></a>
-  <div class="lya-nav-links">
-    <a href="index.html">Home</a>
-    <a href="products.html">Plugins</a>
-    <a href="about.html">About</a>
-    <a href="contact.html" class="active">Contact</a>
-    <a href="products.html" class="lya-btn-nav">Browse plugins</a>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="https://loganyoungaudio.com/cdn/shop/files/LOGAN_AUDIO_WHITE.png?height=34&v=1766438318" alt="Logan Young Audio" style="height:22px;width:auto;"></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Plugins</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <a href="products.html"><button class="btn-nav">Browse plugins</button></a>
   </div>
 </nav>
 
-<div class="lya-page-header">
-  <p class="lya-eyebrow">Get in touch</p>
-  <h1>Contact</h1>
-  <p>Questions about a plugin, order support, or press inquiries — send a message and Logan's team will get back to you.</p>
-</div>
+<div class="wrap">
+  <div class="page-header">
+    <span class="eyebrow">Get in touch</span>
+    <h1>Contact</h1>
+    <p>Questions about a plugin, order support, or press inquiries — send a message and Logan's team will get back to you.</p>
+  </div>
 
-<div class="lya-contact-wrap">
-  <form>
-    <div class="lya-field">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Your name" required>
-    </div>
-    <div class="lya-field">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="name@email.com" required>
-    </div>
-    <div class="lya-field">
-      <label for="subject">Subject</label>
-      <input type="text" id="subject" name="subject" placeholder="What's this about">
-    </div>
-    <div class="lya-field">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Tell us what's up" required></textarea>
-    </div>
-    <button type="submit" class="lya-btn-primary">Send message</button>
-  </form>
-  <div>
-    <div class="lya-info-block">
-      <h3>Support</h3>
-      <p>Order issues, activation problems, or plugin bugs — <a href="mailto:support@loganyoungaudio.com">support@loganyoungaudio.com</a></p>
-    </div>
-    <div class="lya-info-block">
-      <h3>Press and partnerships</h3>
-      <p>For interviews, features, or collabs — <a href="mailto:press@loganyoungaudio.com">press@loganyoungaudio.com</a></p>
-    </div>
-    <div class="lya-info-block">
-      <h3>Response time</h3>
-      <p>Logan's a small operation — expect a reply within 1 to 3 business days.</p>
+  <div class="contact-grid">
+    <form>
+      <div class="form-field">
+        <label>Name</label>
+        <input type="text" placeholder="Your name">
+      </div>
+      <div class="form-field">
+        <label>Email</label>
+        <input type="email" placeholder="name@email.com">
+      </div>
+      <div class="form-field">
+        <label>Subject</label>
+        <input type="text" placeholder="What's this about">
+      </div>
+      <div class="form-field">
+        <label>Message</label>
+        <textarea placeholder="Tell us what's up"></textarea>
+      </div>
+      <button type="button" class="btn-primary">Send message</button>
+    </form>
+    <div>
+      <div class="info-block">
+        <h3>Support</h3>
+        <p>Order issues, activation problems, or plugin bugs — <a href="mailto:support@loganyoungaudio.com">support@loganyoungaudio.com</a></p>
+      </div>
+      <div class="info-block">
+        <h3>Press and partnerships</h3>
+        <p>For interviews, features, or collabs — <a href="mailto:press@loganyoungaudio.com">press@loganyoungaudio.com</a></p>
+      </div>
+      <div class="info-block">
+        <h3>Response time</h3>
+        <p>Logan's a small operation — expect a reply within 1 to 3 business days.</p>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="lya-rule"></div>
-
-<footer class="lya-footer">
-  <div>
-    <div class="lya-footer-logo">Logan Young Audio</div>
-    <p>© 2026 Logan Young Audio. Powered by Shopify.</p>
-  </div>
-  <div class="lya-footer-links">
-    <a href="#">Privacy policy</a>
-    <a href="contact.html">Contact</a>
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Logan Young Audio</div>
+      <p>© 2026 Logan Young Audio. Powered by Shopify.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://loganyoungaudio.com/policies/privacy-policy">Privacy policy</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
 </footer>
 
