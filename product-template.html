@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <!--
   PRODUCT PAGE TEMPLATE — Logan Young Audio
@@ -37,15 +38,24 @@
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="logo"><img src="https://loganyoungaudio.com/cdn/shop/files/LOGAN_AUDIO_WHITE.png?height=34&v=1766438318" alt="Logan Young Audio" style="height:22px;width:auto;"></a>
-    <div class="nav-links">
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu" onclick="toggleNav()">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="19" y2="6"/>
+        <line x1="3" y1="11" x2="19" y2="11"/>
+        <line x1="3" y1="16" x2="19" y2="16"/>
+      </svg>
+    </button>
+    <div class="nav-links" id="nav-links">
       <a href="index.html">Home</a>
       <a href="products.html" class="active">Plugins</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <a href="products.html"><button class="btn-nav">Browse plugins</button></a>
+    <a href="products.html" class="btn-nav">Browse plugins</a>
   </div>
 </nav>
+
+<main id="main">
 
 <div class="wrap">
   <div class="breadcrumb"><a href="products.html">← All plugins</a></div>
@@ -56,17 +66,18 @@
       <div class="hero-media">
         <img id="hero-main-img" src="{{HERO_IMAGE_1_URL}}" alt="{{PRODUCT_NAME}} interface">
       </div>
-      <!-- One .hero-thumb per hero image. Delete extras or add more, min 1. -->
-      <div class="hero-thumbs">
-        <div class="hero-thumb active" onclick="setHeroImage(this,'{{HERO_IMAGE_1_URL}}')">
-          <img src="{{HERO_IMAGE_1_THUMB_URL}}" alt="{{HERO_IMAGE_1_ALT}}">
-        </div>
-        <div class="hero-thumb" onclick="setHeroImage(this,'{{HERO_IMAGE_2_URL}}')">
-          <img src="{{HERO_IMAGE_2_THUMB_URL}}" alt="{{HERO_IMAGE_2_ALT}}">
-        </div>
-        <div class="hero-thumb" onclick="setHeroImage(this,'{{HERO_IMAGE_3_URL}}')">
-          <img src="{{HERO_IMAGE_3_THUMB_URL}}" alt="{{HERO_IMAGE_3_ALT}}">
-        </div>
+      <!-- One .hero-thumb button per hero image. Delete extras or add more, min 1.
+           aria-label should describe what the image shows (e.g. "Show Gross scene image"). -->
+      <div class="hero-thumbs" role="group" aria-label="Product images">
+        <button type="button" class="hero-thumb active" aria-pressed="true" aria-label="{{HERO_IMAGE_1_ALT}}" onclick="setHeroImage(this,'{{HERO_IMAGE_1_URL}}')">
+          <img src="{{HERO_IMAGE_1_THUMB_URL}}" alt="">
+        </button>
+        <button type="button" class="hero-thumb" aria-pressed="false" aria-label="{{HERO_IMAGE_2_ALT}}" onclick="setHeroImage(this,'{{HERO_IMAGE_2_URL}}')">
+          <img src="{{HERO_IMAGE_2_THUMB_URL}}" alt="">
+        </button>
+        <button type="button" class="hero-thumb" aria-pressed="false" aria-label="{{HERO_IMAGE_3_ALT}}" onclick="setHeroImage(this,'{{HERO_IMAGE_3_URL}}')">
+          <img src="{{HERO_IMAGE_3_THUMB_URL}}" alt="">
+        </button>
       </div>
     </div>
     <div class="hero-info">
@@ -103,12 +114,12 @@
     </div>
     <div class="video-grid">
       <div class="video-card">
-        <video controls preload="metadata" poster="{{VIDEO_1_POSTER_URL}}">
+        <video controls preload="metadata" aria-label="{{VIDEO_1_DESCRIPTION}}" poster="{{VIDEO_1_POSTER_URL}}">
           <source src="{{VIDEO_1_URL}}" type="video/mp4">
         </video>
       </div>
       <div class="video-card">
-        <video controls preload="metadata" poster="{{VIDEO_2_POSTER_URL}}">
+        <video controls preload="metadata" aria-label="{{VIDEO_2_DESCRIPTION}}" poster="{{VIDEO_2_POSTER_URL}}">
           <source src="{{VIDEO_2_URL}}" type="video/mp4">
         </video>
       </div>
@@ -141,12 +152,12 @@
     <!-- OPTIONAL: supporting videos for the steps above -->
     <div class="video-grid" style="margin-top:40px;">
       <div class="video-card">
-        <video controls preload="metadata" poster="{{VIDEO_3_POSTER_URL}}">
+        <video controls preload="metadata" aria-label="{{VIDEO_3_DESCRIPTION}}" poster="{{VIDEO_3_POSTER_URL}}">
           <source src="{{VIDEO_3_URL}}" type="video/mp4">
         </video>
       </div>
       <div class="video-card">
-        <video controls preload="metadata" poster="{{VIDEO_4_POSTER_URL}}">
+        <video controls preload="metadata" aria-label="{{VIDEO_4_DESCRIPTION}}" poster="{{VIDEO_4_POSTER_URL}}">
           <source src="{{VIDEO_4_URL}}" type="video/mp4">
         </video>
       </div>
@@ -196,7 +207,7 @@
     </div>
     <!-- OPTIONAL: a video comparing the variants -->
     <div class="video-card" style="margin-top:32px;">
-      <video controls preload="metadata" poster="{{VIDEO_5_POSTER_URL}}">
+      <video controls preload="metadata" aria-label="{{VIDEO_5_DESCRIPTION}}" poster="{{VIDEO_5_POSTER_URL}}">
         <source src="{{VIDEO_5_URL}}" type="video/mp4">
       </video>
     </div>
@@ -258,6 +269,8 @@
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="footer-inner">
     <div>
@@ -272,10 +285,18 @@
 </footer>
 
 <script>
+function toggleNav(){
+  var el = document.getElementById('nav-links');
+  var btn = document.getElementById('nav-toggle');
+  var isOpen = el.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+
 function setHeroImage(el, src){
   document.getElementById('hero-main-img').src = src;
-  document.querySelectorAll('.hero-thumb').forEach(function(t){ t.classList.remove('active'); });
+  document.querySelectorAll('.hero-thumb').forEach(function(t){ t.classList.remove('active'); t.setAttribute('aria-pressed','false'); });
   el.classList.add('active');
+  el.setAttribute('aria-pressed','true');
 }
 </script>
 
