@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Gross Button — Logan Young Audio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="https://loganyoungaudio.com/cdn/shop/files/LOGAN_AUDIO_WHITE.png?height=34&v=1766438318" alt="Logan Young Audio" style="height:22px;width:auto;"></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="products.html"><button class="btn-nav">Browse plugins</button></a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="breadcrumb"><a href="products.html">← All plugins</a></div>
+
+  <section class="hero">
+    <div>
+      <div class="hero-media">
+        <img id="hero-main-img" src="https://loganyoungaudio.com/cdn/shop/files/GROSS-3D.png?v=1766437398&width=1024" alt="The Gross Button plugin interface">
+      </div>
+      <div class="hero-thumbs">
+        <div class="hero-thumb active" onclick="setHeroImage(this,'https://loganyoungaudio.com/cdn/shop/files/GROSS-3D.png?v=1766437398&width=1024')">
+          <img src="https://loganyoungaudio.com/cdn/shop/files/GROSS-3D.png?v=1766437398&width=200" alt="Gross scene box art">
+        </div>
+        <div class="hero-thumb" onclick="setHeroImage(this,'https://loganyoungaudio.com/cdn/shop/files/DISGUST_-_3D.png?v=1766437422&width=1024')">
+          <img src="https://loganyoungaudio.com/cdn/shop/files/DISGUST_-_3D.png?v=1766437422&width=200" alt="Disgust scene box art">
+        </div>
+        <div class="hero-thumb" onclick="setHeroImage(this,'https://loganyoungaudio.com/cdn/shop/files/PUTRID_-_3D.png?v=1766437427&width=1024')">
+          <img src="https://loganyoungaudio.com/cdn/shop/files/PUTRID_-_3D.png?v=1766437427&width=200" alt="Putrid scene box art">
+        </div>
+      </div>
+    </div>
+    <div class="hero-info">
+      <span class="eyebrow">VST · AU · AAX plugin</span>
+      <h1>The Gross Button</h1>
+      <p class="tagline">Instant dissonance for modern metal</p>
+      <p>The Gross Button is a purpose-built pitch effect designed to create the nasty, dissonant, otherworldly guitar tones heard in modern metal, djent, and progressive heavy music.</p>
+      <p class="callout">No menus. No tweaking paralysis. Just brutal results.</p>
+      <p>Built to sit at the very start of your signal chain, The Gross Button affects your guitar DI before it hits your amp sim, delivering tight, unstable, "how-is-this-even-legal" tones that cut through dense mixes.</p>
+      <div class="price-row">
+        <span class="price">$29.99</span>
+        <a href="https://loganyoungaudio.com/products/the-gross-button" class="btn-primary">Purchase now</a>
+      </div>
+      <div class="spec-pills">
+        <span class="pill">VST</span>
+        <span class="pill">AU</span>
+        <span class="pill">AAX</span>
+        <span class="pill">macOS 10.13+</span>
+        <span class="pill">Windows 10+</span>
+        <span class="pill">2 activations</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="section" style="padding-top:0;border-top:none;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Hear it</div>
+      <h2>The Gross Button in a mix</h2>
+    </div>
+    <div class="video-grid">
+      <div class="video-card">
+        <video controls preload="metadata" poster="https://loganyoungaudio.com/cdn/shop/files/preview_images/e273c06cc68640b0a124d32211081f31.thumbnail.0000000000_small.jpg?v=1770331289">
+          <source src="https://loganyoungaudio.com/cdn/shop/videos/c/vp/e273c06cc68640b0a124d32211081f31/e273c06cc68640b0a124d32211081f31.HD-1080p-4.8Mbps-70940227.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-card">
+        <video controls preload="metadata" poster="https://loganyoungaudio.com/cdn/shop/files/preview_images/af7cd95bdd864a46a4e06ccdd2901d6b.thumbnail.0000000000_small.jpg?v=1770362619">
+          <source src="https://loganyoungaudio.com/cdn/shop/videos/c/vp/af7cd95bdd864a46a4e06ccdd2901d6b/af7cd95bdd864a46a4e06ccdd2901d6b.HD-1080p-4.8Mbps-71046941.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Process</div>
+      <h2>How the Gross Button works</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <p>Drop it at the start of your chain</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <p>Pick a scene — Gross, Disgust, or Putrid</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <p>Turn NUKE and SICKEN until it feels illegal</p>
+      </div>
+    </div>
+    <div class="video-grid" style="margin-top:40px;">
+      <div class="video-card">
+        <video controls preload="metadata" poster="https://loganyoungaudio.com/cdn/shop/files/preview_images/f4c83ea29adf4d3fb1247c8baa1ae343.thumbnail.0000000000_small.jpg?v=1766463962">
+          <source src="https://loganyoungaudio.com/cdn/shop/videos/c/vp/f4c83ea29adf4d3fb1247c8baa1ae343/f4c83ea29adf4d3fb1247c8baa1ae343.HD-1080p-3.3Mbps-65692699.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-card">
+        <video controls preload="metadata" poster="https://loganyoungaudio.com/cdn/shop/files/preview_images/2be53348a0c0426e8131a84a8b01d292.thumbnail.0000000000_small.jpg?v=1766465837">
+          <source src="https://loganyoungaudio.com/cdn/shop/videos/c/vp/2be53348a0c0426e8131a84a8b01d292/2be53348a0c0426e8131a84a8b01d292.HD-1080p-4.8Mbps-65693685.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Three flavors of wrong</div>
+      <h2>Select your scene</h2>
+    </div>
+    <div class="variants-grid">
+      <div class="variant-card variant-1">
+        <div class="variant-media"><img src="https://loganyoungaudio.com/cdn/shop/files/GROSS.png?v=1770330300&width=1024" alt="Gross scene"></div>
+        <div class="variant-body">
+          <h3 class="variant-name">Gross</h3>
+          <div class="intensity"><span class="filled"></span><span></span><span></span></div>
+          <p>Bright, tense, and alien. Adds unstable dissonance that cuts through the mix. Perfect for leads and upper-register riffs.</p>
+        </div>
+      </div>
+      <div class="variant-card variant-2">
+        <div class="variant-media"><img src="https://loganyoungaudio.com/cdn/shop/files/DISGUST.png?v=1770330333&width=1024" alt="Disgust scene"></div>
+        <div class="variant-body">
+          <h3 class="variant-name">Disgust</h3>
+          <div class="intensity"><span class="filled"></span><span class="filled"></span><span></span></div>
+          <p>Darker and more sinister. A heavier, uglier flavor of dissonance that adds weight and menace to rhythm parts.</p>
+        </div>
+      </div>
+      <div class="variant-card variant-3">
+        <div class="variant-media"><img src="https://loganyoungaudio.com/cdn/shop/files/PUTRID.png?v=1770330376&width=1024" alt="Putrid scene"></div>
+        <div class="variant-body">
+          <h3 class="variant-name">Putrid</h3>
+          <div class="intensity"><span class="filled"></span><span class="filled"></span><span class="filled"></span></div>
+          <p>Maximum dissonance. Three-note chaos that sounds wrong in the best way — no mercy.</p>
+        </div>
+      </div>
+    </div>
+    <div class="video-card" style="margin-top:32px;">
+      <video controls preload="metadata" poster="https://loganyoungaudio.com/cdn/shop/files/preview_images/e55b88b14ea64ddc912379e40967999f.thumbnail.0000000000_small.jpg?v=1766466180">
+        <source src="https://loganyoungaudio.com/cdn/shop/videos/c/vp/e55b88b14ea64ddc912379e40967999f/e55b88b14ea64ddc912379e40967999f.HD-1080p-4.8Mbps-65693875.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">The two controls</div>
+      <h2>Nuke &amp; Sicken</h2>
+    </div>
+    <div class="controls-grid controls-grid-media">
+      <img src="https://loganyoungaudio.com/cdn/shop/files/Untitled_design_88.png?v=1770330563&width=560" alt="Nuke and Sicken knobs on the Gross Button interface" style="border-radius:12px;border:1px solid var(--border);">
+      <div style="display:flex;flex-direction:column;gap:28px;">
+        <div class="control-card">
+          <span class="control-label">Input gain</span>
+          <h3>Nuke</h3>
+          <p>Controls how hard your guitar DI hits the pitch engine. Turning up NUKE pushes the input signal harder before pitch shifting, increasing aggression, instability, and harmonic chaos.</p>
+          <p>Great for dialing in how violent the effect reacts to your playing, from subtle tension to full meltdown.</p>
+        </div>
+        <div class="control-card">
+          <span class="control-label">Wet signal mix</span>
+          <h3>Sicken</h3>
+          <p>Blends the effected signal with your dry tone. Lower settings keep things controlled and usable, while higher settings fully embrace the dissonance.</p>
+          <p>Perfect for automation, transitions, and finding the exact balance between clarity and absolute grossness.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="purchase-block">
+      <div class="purchase-info">
+        <h3>Ready to get gross?</h3>
+        <div class="spec-table">
+          <div class="spec-row"><span class="label">Formats</span><span class="value">VST · AU · AAX</span></div>
+          <div class="spec-row"><span class="label">Compatibility</span><span class="value">macOS 10.13+ · Windows 10+</span></div>
+          <div class="spec-row"><span class="label">Activations</span><span class="value">2 devices, non-simultaneous</span></div>
+          <div class="spec-row"><span class="label">License type</span><span class="value">One-time purchase</span></div>
+          <div class="spec-row"><span class="label">Activation policy</span><span class="value">For a single user across two devices (e.g. desktop and laptop)</span></div>
+        </div>
+      </div>
+      <div class="purchase-cta">
+        <span class="price">$29.99</span>
+        <span class="license">One-time purchase</span>
+        <a href="https://loganyoungaudio.com/products/the-gross-button" class="btn-primary">Purchase now</a>
+        <a href="https://www.ablazeaudio.com/" class="badge-link"><img src="https://loganyoungaudio.com/cdn/shop/files/PoweredByAblaze_-_Yellow.svg?v=1766445956&width=200" alt="Powered by Ablaze Audio" style="height:20px;width:auto;"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Logan Young Audio</div>
+      <p>© 2026 Logan Young Audio. Powered by Shopify.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://loganyoungaudio.com/policies/privacy-policy">Privacy policy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function setHeroImage(el, src){
+  document.getElementById('hero-main-img').src = src;
+  document.querySelectorAll('.hero-thumb').forEach(function(t){ t.classList.remove('active'); });
+  el.classList.add('active');
+}
+</script>
+
+</body>
+</html>

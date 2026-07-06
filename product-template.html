@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{PRODUCT_NAME}} — Logan Young Audio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--
+  PRODUCT PAGE TEMPLATE — Logan Young Audio
+  ==========================================
+  How to use this file to add a new product:
+
+  1. Save a copy as e.g. "product-slug.html" next to this template.
+  2. Find/replace every {{PLACEHOLDER}} token below with real copy.
+  3. This file links to the shared style.css — keep it in the same folder
+     so every product page stays visually identical. Never re-embed styles
+     in an individual product page; edit style.css once instead.
+  4. Sections marked OPTIONAL can be deleted entirely if they don't apply
+     to a given product (e.g. a product with no selectable modes/variants
+     doesn't need the "Select your scene"-style section).
+  5. The variant cards and control cards are REPEATABLE blocks — copy the
+     single block as many times as needed (2, 3, 4+), just keep using the
+     next variant-N color in sequence for cards, and add more --v4, --v5
+     colors to style.css if a product needs more than 3.
+  6. Video blocks are also REPEATABLE — add or remove <div class="video-card">
+     entries inside a .video-grid to match however many demo clips exist.
+  7. Update the nav "active" class to point at Products (this never
+     changes — individual products aren't in the top nav).
+-->
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="https://loganyoungaudio.com/cdn/shop/files/LOGAN_AUDIO_WHITE.png?height=34&v=1766438318" alt="Logan Young Audio" style="height:22px;width:auto;"></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="products.html"><button class="btn-nav">Browse plugins</button></a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="breadcrumb"><a href="products.html">← All plugins</a></div>
+
+  <!-- HERO — image carousel (2-4 images) + name, tagline, price, purchase CTA -->
+  <section class="hero">
+    <div>
+      <div class="hero-media">
+        <img id="hero-main-img" src="{{HERO_IMAGE_1_URL}}" alt="{{PRODUCT_NAME}} interface">
+      </div>
+      <!-- One .hero-thumb per hero image. Delete extras or add more, min 1. -->
+      <div class="hero-thumbs">
+        <div class="hero-thumb active" onclick="setHeroImage(this,'{{HERO_IMAGE_1_URL}}')">
+          <img src="{{HERO_IMAGE_1_THUMB_URL}}" alt="{{HERO_IMAGE_1_ALT}}">
+        </div>
+        <div class="hero-thumb" onclick="setHeroImage(this,'{{HERO_IMAGE_2_URL}}')">
+          <img src="{{HERO_IMAGE_2_THUMB_URL}}" alt="{{HERO_IMAGE_2_ALT}}">
+        </div>
+        <div class="hero-thumb" onclick="setHeroImage(this,'{{HERO_IMAGE_3_URL}}')">
+          <img src="{{HERO_IMAGE_3_THUMB_URL}}" alt="{{HERO_IMAGE_3_ALT}}">
+        </div>
+      </div>
+    </div>
+    <div class="hero-info">
+      <span class="eyebrow">{{FORMAT_SUMMARY}}</span>
+      <!-- e.g. "VST · AU · AAX plugin" -->
+      <h1>{{PRODUCT_NAME}}</h1>
+      <p class="tagline">{{ONE_LINE_TAGLINE}}</p>
+      <p>{{DESCRIPTION_PARAGRAPH_1}}</p>
+      <!-- OPTIONAL: a short, punchy standalone line in the brand's voice -->
+      <p class="callout">{{CALLOUT_LINE}}</p>
+      <p>{{DESCRIPTION_PARAGRAPH_2}}</p>
+      <div class="price-row">
+        <span class="price">{{PRICE}}</span>
+        <a href="{{PURCHASE_URL}}" class="btn-primary">Purchase now</a>
+      </div>
+      <!-- Repeat .pill for each format/compatibility/activation spec -->
+      <div class="spec-pills">
+        <span class="pill">{{SPEC_1}}</span>
+        <span class="pill">{{SPEC_2}}</span>
+        <span class="pill">{{SPEC_3}}</span>
+        <span class="pill">{{SPEC_4}}</span>
+        <span class="pill">{{SPEC_5}}</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- OPTIONAL — demo videos placed near the top, before "How it works" -->
+<section class="section" style="padding-top:0;border-top:none;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Hear it</div>
+      <h2>{{PRODUCT_NAME}} in a mix</h2>
+    </div>
+    <div class="video-grid">
+      <div class="video-card">
+        <video controls preload="metadata" poster="{{VIDEO_1_POSTER_URL}}">
+          <source src="{{VIDEO_1_URL}}" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-card">
+        <video controls preload="metadata" poster="{{VIDEO_2_POSTER_URL}}">
+          <source src="{{VIDEO_2_URL}}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- "How it works" — only use numbered steps if the process is genuinely
+     sequential. 3 steps is typical; add/remove as needed. -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Process</div>
+      <h2>How {{PRODUCT_NAME}} works</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <p>{{STEP_1}}</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <p>{{STEP_2}}</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <p>{{STEP_3}}</p>
+      </div>
+    </div>
+    <!-- OPTIONAL: supporting videos for the steps above -->
+    <div class="video-grid" style="margin-top:40px;">
+      <div class="video-card">
+        <video controls preload="metadata" poster="{{VIDEO_3_POSTER_URL}}">
+          <source src="{{VIDEO_3_URL}}" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-card">
+        <video controls preload="metadata" poster="{{VIDEO_4_POSTER_URL}}">
+          <source src="{{VIDEO_4_URL}}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPTIONAL — only include if the product has selectable modes, presets,
+     or variants. Delete this whole section if it doesn't apply.
+     Cards use variant-1 / variant-2 / variant-3 for a deliberate color
+     progression (defined in style.css) — reorder or add --v4/--v5 stops
+     in style.css if a product has a different number of variants. The
+     intensity dots are optional too: only use them if the variants
+     represent an actual ordered scale (mild → extreme, subtle → bold,
+     etc). If the variants aren't ordered, drop the .intensity div. -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">{{VARIANT_SECTION_EYEBROW}}</div>
+      <h2>{{VARIANT_SECTION_TITLE}}</h2>
+    </div>
+    <div class="variants-grid">
+      <div class="variant-card variant-1">
+        <div class="variant-media"><img src="{{VARIANT_1_IMAGE_URL}}" alt="{{VARIANT_1_NAME}}"></div>
+        <div class="variant-body">
+          <h3 class="variant-name">{{VARIANT_1_NAME}}</h3>
+          <div class="intensity"><span class="filled"></span><span></span><span></span></div>
+          <p>{{VARIANT_1_DESCRIPTION}}</p>
+        </div>
+      </div>
+      <div class="variant-card variant-2">
+        <div class="variant-media"><img src="{{VARIANT_2_IMAGE_URL}}" alt="{{VARIANT_2_NAME}}"></div>
+        <div class="variant-body">
+          <h3 class="variant-name">{{VARIANT_2_NAME}}</h3>
+          <div class="intensity"><span class="filled"></span><span class="filled"></span><span></span></div>
+          <p>{{VARIANT_2_DESCRIPTION}}</p>
+        </div>
+      </div>
+      <div class="variant-card variant-3">
+        <div class="variant-media"><img src="{{VARIANT_3_IMAGE_URL}}" alt="{{VARIANT_3_NAME}}"></div>
+        <div class="variant-body">
+          <h3 class="variant-name">{{VARIANT_3_NAME}}</h3>
+          <div class="intensity"><span class="filled"></span><span class="filled"></span><span class="filled"></span></div>
+          <p>{{VARIANT_3_DESCRIPTION}}</p>
+        </div>
+      </div>
+    </div>
+    <!-- OPTIONAL: a video comparing the variants -->
+    <div class="video-card" style="margin-top:32px;">
+      <video controls preload="metadata" poster="{{VIDEO_5_POSTER_URL}}">
+        <source src="{{VIDEO_5_URL}}" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- OPTIONAL — only include if the product has 1-3 key controls worth
+     explaining individually (knobs, sliders, main parameters). Delete
+     this whole section for a product with no user-facing controls, or
+     if the controls are simple enough to be covered in the description. -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">{{CONTROLS_SECTION_EYEBROW}}</div>
+      <h2>{{CONTROLS_SECTION_TITLE}}</h2>
+    </div>
+    <div class="controls-grid controls-grid-media">
+      <img src="{{CONTROLS_IMAGE_URL}}" alt="{{PRODUCT_NAME}} controls" style="border-radius:12px;border:1px solid var(--border);">
+      <div style="display:flex;flex-direction:column;gap:28px;">
+        <div class="control-card">
+          <span class="control-label">{{CONTROL_1_LABEL}}</span>
+          <h3>{{CONTROL_1_NAME}}</h3>
+          <p>{{CONTROL_1_DESCRIPTION}}</p>
+        </div>
+        <div class="control-card">
+          <span class="control-label">{{CONTROL_2_LABEL}}</span>
+          <h3>{{CONTROL_2_NAME}}</h3>
+          <p>{{CONTROL_2_DESCRIPTION}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PURCHASE BLOCK — always include, this is the final conversion point -->
+<section class="section">
+  <div class="wrap">
+    <div class="purchase-block">
+      <div class="purchase-info">
+        <h3>{{PURCHASE_HEADLINE}}</h3>
+        <!-- Repeat .spec-row for each spec; typical set below -->
+        <div class="spec-table">
+          <div class="spec-row"><span class="label">Formats</span><span class="value">{{FORMATS}}</span></div>
+          <div class="spec-row"><span class="label">Compatibility</span><span class="value">{{COMPATIBILITY}}</span></div>
+          <div class="spec-row"><span class="label">Activations</span><span class="value">{{ACTIVATIONS}}</span></div>
+          <div class="spec-row"><span class="label">License type</span><span class="value">{{LICENSE_TYPE}}</span></div>
+          <div class="spec-row"><span class="label">Activation policy</span><span class="value">{{ACTIVATION_POLICY}}</span></div>
+        </div>
+      </div>
+      <div class="purchase-cta">
+        <span class="price">{{PRICE}}</span>
+        <span class="license">{{LICENSE_TYPE}}</span>
+        <a href="{{PURCHASE_URL}}" class="btn-primary">Purchase now</a>
+        <!-- Keep this badge if the product was built with Ablaze Audio;
+             delete the <a> entirely if it wasn't. -->
+        <a href="https://www.ablazeaudio.com/" class="badge-link"><img src="https://loganyoungaudio.com/cdn/shop/files/PoweredByAblaze_-_Yellow.svg?v=1766445956&width=200" alt="Powered by Ablaze Audio" style="height:20px;width:auto;"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Logan Young Audio</div>
+      <p>© 2026 Logan Young Audio. Powered by Shopify.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://loganyoungaudio.com/policies/privacy-policy">Privacy policy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function setHeroImage(el, src){
+  document.getElementById('hero-main-img').src = src;
+  document.querySelectorAll('.hero-thumb').forEach(function(t){ t.classList.remove('active'); });
+  el.classList.add('active');
+}
+</script>
+
+</body>
+</html>
