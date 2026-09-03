@@ -4,371 +4,178 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Buzz Button — Logan Young Audio</title>
-<meta name="description" content="A three-mode fuzz built to blend a crushing low octave straight into your guitar tone. Simple controls, massive sounds.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@400..900&family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<meta name="description" content="The Buzz Button is a three-mode fuzz built to blend a crushing low octave straight into your guitar tone. Simple controls, massive sounds.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <style>
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
   body {
-    font-family: 'Oswald', 'Arial Narrow', sans-serif;
-    background: oklch(0.17 0.006 60);
-    color: oklch(0.92 0.01 70);
+    font-family: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    background: #000000;
+    color: #f2f2f2;
   }
-  a { color: var(--accent, oklch(0.78 0.16 68)); text-decoration: none; }
-  a:hover { color: oklch(0.85 0.14 68); }
-  .stencil {
-    font-family: 'Big Shoulders Stencil', 'Arial Narrow', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-  }
-  .mono {
-    font-family: 'IBM Plex Mono', monospace;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-  .rivet {
-    position: absolute;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 30%, oklch(0.55 0.01 60), oklch(0.2 0.006 60) 70%);
-    box-shadow: 0 1px 0 rgba(0,0,0,0.6), inset 0 0 1px rgba(255,255,255,0.15);
-  }
-  .btn-primary {
+  a { color: inherit; text-decoration: none; }
+  .btn-blue {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 18px 32px;
-    background: var(--accent, oklch(0.78 0.16 68));
-    color: oklch(0.14 0.01 60);
-    font-family: 'IBM Plex Mono', monospace;
+    padding: 13px 26px;
+    background: #1c64c9;
+    color: #ffffff;
     font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
     font-size: 15px;
     border: none;
-    box-shadow: 0 4px 0 oklch(0.46 0.11 68), 0 4px 10px rgba(0,0,0,0.4);
-  }
-  .hazard-edge {
-    background-image: repeating-linear-gradient(135deg, var(--accent, oklch(0.78 0.16 68)) 0 14px, oklch(0.14 0.01 60) 14px 28px);
-  }
-  .spec-tag {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 8px 14px;
-    border: 1px solid oklch(0.4 0.01 60);
-    color: oklch(0.72 0.02 70);
-  }
-  .mode-card, .route-card {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    padding: 24px;
-    border: 1px solid oklch(0.35 0.01 60);
-    background: oklch(0.2 0.008 60);
-  }
-  .gallery-dot {
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    border: none;
-    padding: 0;
+    border-radius: 4px;
     cursor: pointer;
-    background: oklch(0.4 0.01 60);
   }
-  @media (max-width: 720px) {
-    .product-grid { grid-template-columns: 1fr !important; }
-    .mode-grid { grid-template-columns: 1fr !important; }
-    .route-grid { grid-template-columns: 1fr !important; }
-    .section-pad { padding-left: 24px !important; padding-right: 24px !important; }
-    .title-size { font-size: 34px !important; }
+  @media (max-width: 760px) {
+    .nav-links { display: none !important; }
+    .scene-grid { grid-template-columns: 1fr !important; }
+    .product-split { grid-template-columns: 1fr !important; }
   }
 </style>
 </head>
 <body>
-<div style="display: flex; flex-direction: column; width: 100%; min-height: 100vh; background: oklch(0.17 0.006 60); --accent: oklch(0.78 0.16 68);">
+<div style="display: flex; flex-direction: column; width: 100%; min-height: 100vh; background: #000000;">
 
   <!-- NAV -->
-  <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; border-bottom: 1px solid oklch(0.3 0.008 60); background: oklch(0.15 0.006 60);">
-    <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
-      <img src="images/logo.png" alt="Logan Young Audio" style="height: 34px; width: auto;">
-    </a>
-    <div class="mono" style="display: flex; gap: 36px; font-size: 13px; color: oklch(0.75 0.02 70);">
-      <a href="index.html" style="color: inherit;">HOME</a>
-      <a href="index.html#plugins" style="color: inherit;">PLUGINS</a>
-      <a href="about.html" style="color: inherit;">ABOUT</a>
-      <a href="contact.html" style="color: inherit;">CONTACT</a>
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; border-bottom: 1px solid #1c1c1c;">
+    <div class="nav-links" style="display: flex; gap: 24px; font-size: 14px; color: #e8e8e8;">
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+      <a href="about-us.html">About Us</a>
+    </div>
+    <a href="index.html"><img src="images/logo-white.png" alt="Logan Young Audio" style="height: 26px; width: auto;"></a>
+    <div style="display: flex; gap: 18px; color: #e8e8e8;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
     </div>
   </div>
 
-  <!-- BREADCRUMB -->
-  <div class="section-pad mono" style="padding: 18px 48px 0; font-size: 11px; color: oklch(0.5 0.01 60); max-width: 1200px; margin: 0 auto; width: 100%;">
-    <a href="index.html" style="color: inherit;">HOME</a> <span style="opacity:0.5;">/</span> <a href="index.html#plugins" style="color: inherit;">PLUGINS</a> <span style="opacity:0.5;">/</span> <span style="color: var(--accent, oklch(0.78 0.16 68));">THE BUZZ BUTTON</span>
+  <!-- HERO VIDEO -->
+  <div style="position: relative; width: 100%; aspect-ratio: 16 / 9; background: #141414; overflow: hidden;">
+    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="#666666"><path d="M8 5v14l11-7z"/></svg>
+      <span style="font-size: 13px; letter-spacing: 0.08em; color: #666666;">VIDEO PLACEHOLDER</span>
+    </div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(18,18,18,0.4), rgba(18,18,18,0) 45%, rgba(18,18,18,0.9) 100%);"></div>
+    <div style="position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: center; padding: 0 40px 40px;">
+      <div style="max-width: 640px;">
+        <h1 style="margin: 0 0 10px; font-size: 34px; font-weight: 800; color: #ffffff;">The Buzz Button</h1>
+        <h2 style="margin: 0; font-size: 18px; font-weight: 700; color: #e0e0e0;">Simple Controls. Massive Sounds.</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO TEXT -->
+  <div style="padding: 48px 40px 64px; text-align: center;">
+    <div style="max-width: 640px; margin: 0 auto;">
+      <p style="margin: 0 0 18px; font-size: 14px; line-height: 1.7; color: #b0b0b0;">The Buzz Button is a three-mode fuzz built to blend a crushing low octave straight into your guitar tone — for modern metal, djent, and anything that needs to sound bigger.</p>
+      <p style="margin: 0 0 18px; font-size: 14px; line-height: 1.7; color: #b0b0b0;">Three internal routings change how your dry signal, octave, and fuzz interact — from clean and controlled to completely unhinged.</p>
+      <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #b0b0b0;">Drop it anywhere in your chain and dial in Hive, Sting, and Gate until your tone turns into something else entirely.</p>
+    </div>
+  </div>
+
+  <!-- PRODUCT / BUY -->
+  <div style="padding: 0 40px 96px;">
+    <div class="product-split" style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;">
+      <div style="position: relative; aspect-ratio: 4 / 3; background: radial-gradient(circle at 50% 40%, #1a1a1a, #000000 72%); display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <img src="images/buzz-drone.jpg" alt="The Buzz Button pedal" style="max-height: 100%; max-width: 60%; object-fit: contain;">
+      </div>
+      <div>
+        <h3 style="margin: 0 0 8px; font-size: 26px; font-weight: 700; color: #ffffff;">The Buzz Button</h3>
+        <div style="font-size: 18px; color: #d8d8d8; margin-bottom: 18px;">$29.99</div>
+        <p style="margin: 0 0 16px; font-size: 13px; line-height: 1.7; color: #a0a0a0;"><strong style="color: #cfcfcf;">Activation Policy:</strong> Each purchase of The Buzz Button includes 2 device activations. These are for non-simultaneous use by a single user (e.g. desktop and laptop).</p>
+        <p style="margin: 0 0 4px; font-size: 13px; color: #a0a0a0;">VST | AU | AAX</p>
+        <p style="margin: 0 0 4px; font-size: 13px; color: #a0a0a0;">MacOS 10.13+ | Windows 10+</p>
+        <p style="margin: 0 0 16px; font-size: 13px; color: #a0a0a0;">2 Activations</p>
+        <p style="margin: 0 0 22px; font-size: 13px; color: #a0a0a0;"><strong style="color: #cfcfcf;">License type:</strong> One-time purchase</p>
+        <a href="#" class="btn-blue">Purchase Now</a>
+      </div>
+    </div>
   </div>
 
   <!-- VIDEO -->
-  <div class="section-pad" style="padding: 32px 48px 72px;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-      <div class="mono" style="font-size: 12px; color: var(--accent, oklch(0.78 0.16 68)); margin-bottom: 10px;">DEMO</div>
-      <h2 class="stencil" style="margin: 0 0 28px; font-size: 30px; font-weight: 800; color: oklch(0.94 0.01 70);">SEE IT IN ACTION</h2>
-      <div style="position: relative; border: 2px solid oklch(0.4 0.01 60); background: oklch(0.22 0.01 60); aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center;">
-        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="oklch(0.6 0.01 60)" stroke-width="1.4">
-          <circle cx="12" cy="12" r="10"></circle>
-          <path d="M10 8l6 4-6 4V8z" fill="oklch(0.6 0.01 60)" stroke="none"></path>
-        </svg>
-        <div class="mono" style="position: absolute; bottom: 20px; font-size: 12px; color: oklch(0.55 0.01 60);">[ PRODUCT DEMO VIDEO ]</div>
+  <div style="width: 100%; aspect-ratio: 16 / 9; background: #141414; border-top: 1px solid #2a2a2a; border-bottom: 1px solid #2a2a2a; display: flex; align-items: center; justify-content: center; gap: 10px;">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="#666666"><path d="M8 5v14l11-7z"/></svg>
+    <span style="font-size: 13px; letter-spacing: 0.08em; color: #666666;">VIDEO PLACEHOLDER</span>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div style="padding: 80px 40px; text-align: center;">
+    <h2 style="margin: 0 0 20px; font-size: 30px; font-weight: 800; color: #ffffff;">How The Buzz Button Works</h2>
+    <p style="margin: 0 0 6px; font-size: 14px; color: #b0b0b0;">Drop it anywhere in your chain</p>
+    <p style="margin: 0 0 6px; font-size: 14px; color: #b0b0b0;">Pick a mode (Drone / Swarm / Queen)</p>
+    <p style="margin: 0; font-size: 14px; color: #b0b0b0;">Dial in HIVE, STING &amp; GATE until it swarms</p>
+  </div>
+
+  <!-- SELECT YOUR MODE -->
+  <div style="padding: 56px 40px 40px; text-align: center;">
+    <h2 style="margin: 0; font-size: 30px; font-weight: 800; color: #ffffff;">Select Your Mode</h2>
+  </div>
+
+  <!-- VIDEO -->
+  <div style="width: 100%; aspect-ratio: 16 / 9; background: #141414; border-top: 1px solid #2a2a2a; border-bottom: 1px solid #2a2a2a; display: flex; align-items: center; justify-content: center; gap: 10px;">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="#666666"><path d="M8 5v14l11-7z"/></svg>
+    <span style="font-size: 13px; letter-spacing: 0.08em; color: #666666;">VIDEO PLACEHOLDER</span>
+  </div>
+
+  <div style="padding: 56px 40px 88px;">
+    <div class="scene-grid" style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center;">
+      <div>
+        <img src="images/buzz-drone.jpg" alt="Drone mode" style="width: 100%; max-width: 220px; height: auto; margin: 0 auto 18px; display: block;">
+        <h3 style="margin: 0 0 8px; font-size: 18px; font-weight: 700; color: #ffffff;">Drone</h3>
+        <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #a0a0a0;">The all-purpose fuzz. Thick, aggressive, and usable across everything from riffs and chords to leads and breakdowns.</p>
+      </div>
+      <div>
+        <img src="images/buzz-swarm.jpg" alt="Swarm mode" style="width: 100%; max-width: 220px; height: auto; margin: 0 auto 18px; display: block;">
+        <h3 style="margin: 0 0 8px; font-size: 18px; font-weight: 700; color: #ffffff;">Swarm</h3>
+        <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #a0a0a0;">Darker, meaner, more aggressive. A heavier fuzz character built for riffs that need extra bite and weight.</p>
+      </div>
+      <div>
+        <img src="images/buzz-queen.jpg" alt="Queen mode" style="width: 100%; max-width: 220px; height: auto; margin: 0 auto 18px; display: block;">
+        <h3 style="margin: 0 0 8px; font-size: 18px; font-weight: 700; color: #ffffff;">Queen</h3>
+        <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #a0a0a0;">Maximum aggression. Saturated, chaotic, and intentionally over-the-top when you want your tone to completely lose its mind.</p>
       </div>
     </div>
   </div>
 
-  <!-- PRODUCT HERO -->
-  <div class="section-pad" style="padding: 0 48px 80px;">
-    <div class="product-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; max-width: 1200px; margin: 0 auto;">
-
-      <!-- Gallery: auto-scroller between the 3 box renders -->
-      <div style="display: flex; flex-direction: column; gap: 14px;">
-        <div style="position: relative; border: 2px solid oklch(0.4 0.01 60); aspect-ratio: 1 / 1; overflow: hidden;">
-          <div id="galleryTrack" style="display: flex; width: 300%; height: 100%; transform: translateX(0%); transition: transform 0.7s cubic-bezier(0.65,0,0.35,1);">
-            <img src="images/buzz-drone.jpg" alt="The Buzz Button, Drone mode" style="width: 33.3334%; height: 100%; object-fit: cover; display: block; flex-shrink: 0;">
-            <img src="images/buzz-swarm.jpg" alt="The Buzz Button, Swarm mode" style="width: 33.3334%; height: 100%; object-fit: cover; display: block; flex-shrink: 0;">
-            <img src="images/buzz-queen.jpg" alt="The Buzz Button, Queen mode" style="width: 33.3334%; height: 100%; object-fit: cover; display: block; flex-shrink: 0;">
-          </div>
-          <div class="rivet" style="top: 10px; left: 10px;"></div>
-          <div class="rivet" style="top: 10px; right: 10px;"></div>
-          <div class="rivet" style="bottom: 10px; left: 10px;"></div>
-          <div class="rivet" style="bottom: 10px; right: 10px;"></div>
-          <button id="galleryPrev" aria-label="Previous image" style="position: absolute; top: 50%; left: 12px; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; border: 1px solid oklch(0.55 0.01 60); background: oklch(0.1 0.006 60 / 0.55); color: oklch(0.94 0.01 70); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 18px; line-height: 1;">‹</button>
-          <button id="galleryNext" aria-label="Next image" style="position: absolute; top: 50%; right: 12px; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; border: 1px solid oklch(0.55 0.01 60); background: oklch(0.1 0.006 60 / 0.55); color: oklch(0.94 0.01 70); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 18px; line-height: 1;">›</button>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: center; gap: 14px;">
-          <div class="mono" id="galleryLabel" style="font-size: 11px; color: oklch(0.55 0.01 60);">DRONE — 1 / 3</div>
-          <div style="display: flex; gap: 8px;">
-            <button class="gallery-dot" data-index="0" aria-label="DRONE"></button>
-            <button class="gallery-dot" data-index="1" aria-label="SWARM"></button>
-            <button class="gallery-dot" data-index="2" aria-label="QUEEN"></button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Info -->
-      <div style="display: flex; flex-direction: column; gap: 20px;">
-        <div class="mono" style="font-size: 11px; color: oklch(0.6 0.01 60);">02 / FUZZ + OCTAVE</div>
-        <h1 class="stencil title-size" style="margin: 0; font-size: 46px; font-weight: 800; line-height: 1.02; color: oklch(0.96 0.01 70);">THE BUZZ BUTTON</h1>
-        <p style="margin: 0; font-size: 17px; line-height: 1.5; color: oklch(0.85 0.02 70); font-weight: 500;">Simple controls. Massive sounds.</p>
-        <p style="margin: 0; font-size: 16px; line-height: 1.7; color: oklch(0.75 0.02 70);">A three-mode fuzz built to blend a crushing low octave straight into your guitar tone. Three internal routings change how your dry signal, octave, and fuzz interact — from clean and controlled to completely unhinged.</p>
-
-        <div style="display: flex; flex-direction: column; gap: 10px; padding: 20px; border: 1px solid oklch(0.35 0.01 60); background: oklch(0.2 0.008 60);">
-          <div class="mono" style="font-size: 11px; color: oklch(0.6 0.01 60); margin-bottom: 4px;">THREE CONTROLS</div>
-          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <span class="spec-tag">Hive — fuzz amount</span>
-            <span class="spec-tag">Sting — low octave blend</span>
-            <span class="spec-tag">Gate — noise gate</span>
-          </div>
-        </div>
-
-        <a href="#buy" class="mono" style="display: inline-flex; align-items: center; gap: 8px; color: var(--accent, oklch(0.78 0.16 68)); font-size: 12px; margin-top: 4px;">$29.99 — Purchase Details Below ↓</a>
-      </div>
-
-    </div>
+  <!-- VIDEO -->
+  <div style="width: 100%; aspect-ratio: 16 / 9; background: #141414; border-top: 1px solid #2a2a2a; border-bottom: 1px solid #2a2a2a; display: flex; align-items: center; justify-content: center; gap: 10px;">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="#666666"><path d="M8 5v14l11-7z"/></svg>
+    <span style="font-size: 13px; letter-spacing: 0.08em; color: #666666;">VIDEO PLACEHOLDER</span>
   </div>
 
-  <!-- THREE FUZZ MODES -->
-  <div class="section-pad" style="padding: 0 48px 88px; background: oklch(0.15 0.006 60); border-top: 1px solid oklch(0.3 0.008 60); border-bottom: 1px solid oklch(0.3 0.008 60);">
-    <div style="max-width: 1200px; margin: 0 auto; padding-top: 64px;">
-      <div class="mono" style="font-size: 12px; color: var(--accent, oklch(0.78 0.16 68)); margin-bottom: 10px;">THREE FUZZ MODES</div>
-      <h2 class="stencil" style="margin: 0 0 36px; font-size: 32px; font-weight: 800; color: oklch(0.94 0.01 70);">PICK YOUR VENOM</h2>
-      <div class="mode-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
-
-        <div class="mode-card">
-          <img src="images/buzz-drone.jpg" alt="Drone mode" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;">
-          <h3 class="stencil" style="margin: 0; font-size: 22px; font-weight: 800; color: oklch(0.95 0.01 70);">DRONE</h3>
-          <div class="mono" style="font-size: 11px; color: var(--accent, oklch(0.78 0.16 68));">THE ALL-PURPOSE FUZZ</div>
-          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: oklch(0.72 0.02 70);">The most versatile of the three modes. Thick, aggressive, and usable across everything from riffs and chords to leads and breakdowns.</p>
-        </div>
-
-        <div class="mode-card">
-          <img src="images/buzz-swarm.jpg" alt="Swarm mode" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;">
-          <h3 class="stencil" style="margin: 0; font-size: 22px; font-weight: 800; color: oklch(0.95 0.01 70);">SWARM</h3>
-          <div class="mono" style="font-size: 11px; color: var(--accent, oklch(0.78 0.16 68));">DARKER. MEANER. MORE AGGRESSIVE.</div>
-          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: oklch(0.72 0.02 70);">A heavier fuzz character with more aggression and a darker overall sound. Built for riffs that need extra bite and weight.</p>
-        </div>
-
-        <div class="mode-card">
-          <img src="images/buzz-queen.jpg" alt="Queen mode" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;">
-          <h3 class="stencil" style="margin: 0; font-size: 22px; font-weight: 800; color: oklch(0.95 0.01 70);">QUEEN</h3>
-          <div class="mono" style="font-size: 11px; color: var(--accent, oklch(0.78 0.16 68));">MAXIMUM AGGRESSION</div>
-          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: oklch(0.72 0.02 70);">The most extreme fuzz mode in The Buzz Button. Saturated, chaotic, and intentionally over-the-top when you want your guitar tone to completely lose its mind.</p>
-        </div>
-
-      </div>
-    </div>
+  <!-- HIVE, STING & GATE -->
+  <div style="padding: 56px 40px 40px; text-align: center;">
+    <h2 style="margin: 0; font-size: 30px; font-weight: 800; color: #ffffff;">Hive, Sting &amp; Gate</h2>
   </div>
-
-  <!-- THREE WAYS TO BUZZ (routing) -->
-  <div class="section-pad" style="padding: 88px 48px 80px;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-      <div class="mono" style="font-size: 12px; color: var(--accent, oklch(0.78 0.16 68)); margin-bottom: 10px;">INTERNAL ROUTING</div>
-      <h2 class="stencil" style="margin: 0 0 12px; font-size: 32px; font-weight: 800; color: oklch(0.94 0.01 70);">THREE WAYS TO BUZZ</h2>
-      <p style="margin: 0 0 36px; font-size: 15px; line-height: 1.6; color: oklch(0.68 0.02 70); max-width: 70ch;">Three internal routing modes change how your dry guitar, low octave, and fuzz interact.</p>
-
-      <div class="route-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
-
-        <div class="route-card">
-          <div class="mono" style="font-size: 11px; color: var(--accent, oklch(0.78 0.16 68));">I — PARALLEL</div>
-          <svg viewBox="0 0 260 130" width="100%" height="90">
-            <defs><marker id="ar1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="oklch(0.6 0.01 60)"/></marker></defs>
-            <rect x="4" y="6" width="70" height="26" fill="none" stroke="oklch(0.5 0.01 60)"/>
-            <text x="39" y="23" text-anchor="middle" font-size="9" fill="oklch(0.8 0.02 70)" font-family="IBM Plex Mono, monospace">GUITAR</text>
-            <rect x="4" y="96" width="70" height="26" fill="none" stroke="oklch(0.5 0.01 60)"/>
-            <text x="39" y="113" text-anchor="middle" font-size="9" fill="oklch(0.8 0.02 70)" font-family="IBM Plex Mono, monospace">OCTAVE</text>
-            <rect x="110" y="6" width="60" height="26" fill="none" stroke="var(--accent, oklch(0.78 0.16 68))"/>
-            <text x="140" y="23" text-anchor="middle" font-size="9" fill="oklch(0.9 0.01 70)" font-family="IBM Plex Mono, monospace">FUZZ</text>
-            <rect x="110" y="96" width="60" height="26" fill="none" stroke="var(--accent, oklch(0.78 0.16 68))"/>
-            <text x="140" y="113" text-anchor="middle" font-size="9" fill="oklch(0.9 0.01 70)" font-family="IBM Plex Mono, monospace">FUZZ</text>
-            <line x1="74" y1="19" x2="106" y2="19" stroke="oklch(0.6 0.01 60)" marker-end="url(#ar1)"/>
-            <line x1="74" y1="109" x2="106" y2="109" stroke="oklch(0.6 0.01 60)" marker-end="url(#ar1)"/>
-            <line x1="170" y1="19" x2="200" y2="19" stroke="oklch(0.6 0.01 60)"/>
-            <line x1="170" y1="109" x2="200" y2="109" stroke="oklch(0.6 0.01 60)"/>
-            <line x1="200" y1="19" x2="200" y2="109" stroke="oklch(0.6 0.01 60)"/>
-            <line x1="200" y1="64" x2="226" y2="64" stroke="oklch(0.6 0.01 60)" marker-end="url(#ar1)"/>
-            <text x="252" y="68" text-anchor="middle" font-size="9" fill="oklch(0.85 0.02 70)" font-family="IBM Plex Mono, monospace">OUT</text>
-          </svg>
-          <p style="margin: 0; font-size: 13px; line-height: 1.6; color: oklch(0.68 0.02 70);">Guitar and octave are processed independently before being blended — a clear, controlled fuzz with plenty of low-end weight.</p>
-        </div>
-
-        <div class="route-card">
-          <div class="mono" style="font-size: 11px; color: var(--accent, oklch(0.78 0.16 68));">II — SUM</div>
-          <svg viewBox="0 0 260 130" width="100%" height="90">
-            <defs><marker id="ar2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="oklch(0.6 0.01 60)"/></marker></defs>
-            <rect x="4" y="6" width="70" height="26" fill="none" stroke="oklch(0.5 0.01 60)"/>
-            <text x="39" y="23" text-anchor="middle" font-size="9" fill="oklch(0.8 0.02 70)" font-family="IBM Plex Mono, monospace">GUITAR</text>
-            <rect x="4" y="96" width="70" height="26" fill="none" stroke="oklch(0.5 0.01 60)"/>
-            <text x="39" y="113" text-anchor="middle" font-size="9" fill="oklch(0.8 0.02 70)" font-family="IBM Plex Mono, monospace">OCTAVE</text>
-            <line x1="74" y1="19" x2="96" y2="19" stroke="oklch(0.6 0.01 60)"/>
-            <line x1="74" y1="109" x2="96" y2="109" stroke="oklch(0.6 0.01 60)"/>
-            <line x1="96" y1="19" x2="96" y2="109" stroke="oklch(0.6 0.01 60)"/>
-            <line x1="96" y1="64" x2="122" y2="64" stroke="oklch(0.6 0.01 60)" marker-end="url(#ar2)"/>
-            <rect x="128" y="51" width="60" height="26" fill="none" stroke="var(--accent, oklch(0.78 0.16 68))"/>
-            <text x="158" y="68" text-anchor="middle" font-size="9" fill="oklch(0.9 0.01 70)" font-family="IBM Plex Mono, monospace">FUZZ</text>
-            <line x1="188" y1="64" x2="226" y2="64" stroke="oklch(0.6 0.01 60)" marker-end="url(#ar2)"/>
-            <text x="252" y="68" text-anchor="middle" font-size="9" fill="oklch(0.85 0.02 70)" font-family="IBM Plex Mono, monospace">OUT</text>
-          </svg>
-          <p style="margin: 0; font-size: 13px; line-height: 1.6; color: oklch(0.68 0.02 70);">Guitar and octave are blended together before hitting the fuzz, creating a more unified, compressed fuzz character.</p>
-        </div>
-
-        <div class="route-card">
-          <div class="mono" style="font-size: 11px; color: var(--accent, oklch(0.78 0.16 68));">III — CASCADE</div>
-          <svg viewBox="0 0 260 130" width="100%" height="90">
-            <defs><marker id="ar3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="oklch(0.6 0.01 60)"/></marker></defs>
-            <rect x="2" y="6" width="46" height="22" fill="none" stroke="oklch(0.5 0.01 60)"/>
-            <text x="25" y="21" text-anchor="middle" font-size="7" fill="oklch(0.8 0.02 70)" font-family="IBM Plex Mono, monospace">GTR</text>
-            <rect x="2" y="100" width="46" height="22" fill="none" stroke="oklch(0.5 0.01 60)"/>
-            <text x="25" y="115" text-anchor="middle" font-size="7" fill="oklch(0.8 0.02 70)" font-family="IBM Plex Mono, monospace">OCT</text>
-            <rect x="58" y="6" width="52" height="22" fill="none" stroke="var(--accent, oklch(0.78 0.16 68))"/>
-            <text x="84" y="21" text-anchor="middle" font-size="7" fill="oklch(0.9 0.01 70)" font-family="IBM Plex Mono, monospace">½ FUZZ</text>
-            <rect x="58" y="100" width="52" height="22" fill="none" stroke="var(--accent, oklch(0.78 0.16 68))"/>
-            <text x="84" y="115" text-anchor="middle" font-size="7" fill="oklch(0.9 0.01 70)" font-family="IBM Plex Mono, monospace">½ FUZZ</text>
-            <line x1="48" y1="17" x2="54" y2="17" stroke="oklch(0.6 0.01 60)"/>
-            <line x1="48" y1="111" x2="54" y2="111" stroke="oklch(0.6 0.01 60)"/>
-            <line x1="110" y1="17" x2="132" y2="17" stroke="oklch(0.6 0.01 60)"/>
-            <line x1="110" y1="111" x2="132" y2="111" stroke="oklch(0.6 0.01 60)"/>
-            <line x1="132" y1="17" x2="132" y2="111" stroke="oklch(0.6 0.01 60)"/>
-            <line x1="132" y1="64" x2="150" y2="64" stroke="oklch(0.6 0.01 60)" marker-end="url(#ar3)"/>
-            <rect x="156" y="51" width="52" height="26" fill="none" stroke="var(--accent, oklch(0.78 0.16 68))"/>
-            <text x="182" y="68" text-anchor="middle" font-size="7" fill="oklch(0.9 0.01 70)" font-family="IBM Plex Mono, monospace">½ FUZZ</text>
-            <line x1="208" y1="64" x2="226" y2="64" stroke="oklch(0.6 0.01 60)" marker-end="url(#ar3)"/>
-            <text x="248" y="68" text-anchor="middle" font-size="8" fill="oklch(0.85 0.02 70)" font-family="IBM Plex Mono, monospace">OUT</text>
-          </svg>
-          <p style="margin: 0; font-size: 13px; line-height: 1.6; color: oklch(0.68 0.02 70);">Guitar and octave are fuzzed independently at reduced drive, blended, then pushed through a second fuzz stage for extra saturation and chaos.</p>
-        </div>
-
+  <div style="padding: 56px 40px 96px;">
+    <div class="product-split" style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;">
+      <div style="position: relative; aspect-ratio: 1 / 1; background: radial-gradient(circle at 50% 40%, #1a1a1a, #000000 72%); display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <img src="images/buzz-swarm.jpg" alt="Hive, Sting and Gate knobs" style="max-height: 100%; max-width: 70%; object-fit: contain;">
       </div>
-    </div>
-  </div>
-
-  <!-- BUY -->
-  <div id="buy" class="section-pad" style="padding: 96px 48px; background: oklch(0.15 0.006 60); border-top: 1px solid oklch(0.3 0.008 60); border-bottom: 1px solid oklch(0.3 0.008 60);">
-    <div style="max-width: 720px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 22px;">
-      <div class="mono" style="font-size: 12px; color: var(--accent, oklch(0.78 0.16 68));">GET IT NOW</div>
-      <h2 class="stencil" style="margin: 0; font-size: 36px; font-weight: 800; color: oklch(0.95 0.01 70);">THE BUZZ BUTTON</h2>
-      <div class="stencil" style="font-size: 44px; font-weight: 800; color: var(--accent, oklch(0.78 0.16 68));">$29.99</div>
-
-      <div style="display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; padding: 20px 28px; border: 1px solid oklch(0.35 0.01 60); background: oklch(0.2 0.008 60);">
-        <div class="mono" style="font-size: 11px; color: oklch(0.55 0.01 60); text-align: left;">FORMAT<br><span style="color: oklch(0.85 0.02 70);">VST · AU · AAX</span></div>
-        <div class="mono" style="font-size: 11px; color: oklch(0.55 0.01 60); text-align: left;">SYSTEM<br><span style="color: oklch(0.85 0.02 70);">macOS 10.13+ · Win 10+</span></div>
-        <div class="mono" style="font-size: 11px; color: oklch(0.55 0.01 60); text-align: left;">LICENSE<br><span style="color: oklch(0.85 0.02 70);">2 device activations</span></div>
+      <div>
+        <h3 style="margin: 0 0 18px; font-size: 22px; font-weight: 700; color: #ffffff;">Hive, Sting &amp; Gate Knobs</h3>
+        <p style="margin: 0 0 6px; font-size: 14px; font-weight: 700; color: #e0e0e0;">Hive Knob = Fuzz Amount</p>
+        <p style="margin: 0 0 16px; font-size: 13px; line-height: 1.7; color: #a0a0a0;">Controls the amount of fuzz saturation applied to your signal. Turning up HIVE pushes the circuit harder, adding thickness, grit, and harmonic buzz.</p>
+        <p style="margin: 0 0 6px; font-size: 14px; font-weight: 700; color: #e0e0e0;">Sting Knob = Low Octave Blend</p>
+        <p style="margin: 0 0 16px; font-size: 13px; line-height: 1.7; color: #a0a0a0;">Blends a crushing low octave into your dry signal. Lower settings keep things tight and controlled, while higher settings add massive low-end weight.</p>
+        <p style="margin: 0 0 6px; font-size: 14px; font-weight: 700; color: #e0e0e0;">Gate Knob = Noise Gate</p>
+        <p style="margin: 0 0 24px; font-size: 13px; line-height: 1.7; color: #a0a0a0;">Cleans up the fuzz's noise floor, cutting the signal when you're not playing — for tight, controlled silence between hits.</p>
+        <a href="#" class="btn-blue">Purchase now</a>
       </div>
-
-      <a href="#" class="btn-primary" style="padding: 20px 48px; font-size: 16px;">Add To Cart — $29.99</a>
-
-      <div class="mono" style="font-size: 10px; color: oklch(0.5 0.01 60); margin-top: 4px;">POWERED BY <a href="https://www.ablazeaudio.com/" style="color: var(--accent, oklch(0.78 0.16 68));">ABLAZE</a></div>
     </div>
   </div>
 
   <!-- FOOTER -->
-  <div style="margin-top: auto; padding: 40px 48px; border-top: 1px solid oklch(0.3 0.008 60); background: oklch(0.14 0.005 60);">
-    <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
-      <img src="images/logo.png" alt="Logan Young Audio" style="height: 22px; width: auto; opacity: 0.92;">
-      <div class="mono" style="display: flex; gap: 28px; font-size: 11px; color: oklch(0.55 0.01 60);">
-        <a href="index.html" style="color: inherit;">HOME</a>
-        <a href="index.html#plugins" style="color: inherit;">PLUGINS</a>
-        <a href="about.html" style="color: inherit;">ABOUT</a>
-        <a href="contact.html" style="color: inherit;">CONTACT</a>
-      </div>
-      <div class="mono" style="font-size: 11px; color: oklch(0.45 0.008 60);">© 2026 LOGAN YOUNG AUDIO</div>
-    </div>
+  <div style="margin-top: auto; padding: 56px 40px 28px; text-align: center; border-top: 1px solid #1c1c1c;">
+    <div style="font-size: 13px; letter-spacing: 0.08em; color: #8a7226; margin-bottom: 4px;">POWERED BY</div>
+    <div style="font-size: 26px; font-weight: 800; letter-spacing: 0.04em; color: #d3a625; margin-bottom: 28px;">ABLAZE</div>
+    <div style="font-size: 12px; color: #666666;">© 2026 Logan Young Audio, Powered by Shopify &nbsp;&nbsp;<a href="#" style="color: #888888; text-decoration: underline;">Terms and Policies</a></div>
   </div>
 
 </div>
-<script>
-(function () {
-  var LABELS = ['DRONE', 'SWARM', 'QUEEN'];
-  var ACCENT = 'oklch(0.78 0.16 68)';
-  var INACTIVE = 'oklch(0.4 0.01 60)';
-  var track = document.getElementById('galleryTrack');
-  var labelEl = document.getElementById('galleryLabel');
-  var dots = Array.prototype.slice.call(document.querySelectorAll('.gallery-dot'));
-  var prevBtn = document.getElementById('galleryPrev');
-  var nextBtn = document.getElementById('galleryNext');
-  var n = LABELS.length;
-  var idx = 0;
-  var timer = null;
-
-  function render() {
-    track.style.transform = 'translateX(' + (-(idx * 100 / n)).toFixed(4) + '%)';
-    labelEl.textContent = LABELS[idx] + ' — ' + (idx + 1) + ' / ' + n;
-    dots.forEach(function (d, i) {
-      d.style.background = i === idx ? ACCENT : INACTIVE;
-    });
-  }
-  function stopAutoplay() {
-    if (timer) { clearInterval(timer); timer = null; }
-  }
-  function startAutoplay() {
-    stopAutoplay();
-    timer = setInterval(function () {
-      idx = (idx + 1) % n;
-      render();
-    }, 3000);
-  }
-  function goTo(i) {
-    idx = ((i % n) + n) % n;
-    render();
-    startAutoplay();
-  }
-
-  prevBtn.addEventListener('click', function () { goTo(idx - 1); });
-  nextBtn.addEventListener('click', function () { goTo(idx + 1); });
-  dots.forEach(function (d) {
-    d.addEventListener('click', function () { goTo(parseInt(d.dataset.index, 10)); });
-  });
-
-  render();
-  startAutoplay();
-})();
-</script>
 </body>
 </html>
