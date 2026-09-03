@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logan Young Audio — Independent Audio Software</title>
+<meta name="description" content="Logan Young Audio builds fast, unapologetic plugins for modern heavy music. Shop The Gross Button and The Buzz Button.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@400..900&family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+    background: oklch(0.17 0.006 60);
+    color: oklch(0.92 0.01 70);
+  }
+  a { color: var(--accent, oklch(0.78 0.16 68)); text-decoration: none; }
+  a:hover { color: oklch(0.85 0.14 68); }
+  .stencil {
+    font-family: 'Big Shoulders Stencil', 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .mono {
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .rivet {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, oklch(0.55 0.01 60), oklch(0.2 0.006 60) 70%);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.6), inset 0 0 1px rgba(255,255,255,0.15);
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px;
+    background: var(--accent, oklch(0.78 0.16 68));
+    color: oklch(0.14 0.01 60);
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: none;
+    box-shadow: 0 4px 0 oklch(0.46 0.11 68), 0 4px 10px rgba(0,0,0,0.4);
+    cursor: pointer;
+  }
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 26px;
+    background: transparent;
+    color: oklch(0.85 0.02 70);
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 13px;
+    border: 2px solid oklch(0.4 0.01 60);
+  }
+  .hazard-edge {
+    background-image: repeating-linear-gradient(135deg, var(--accent, oklch(0.78 0.16 68)) 0 14px, oklch(0.14 0.01 60) 14px 28px);
+  }
+  @media (max-width: 720px) {
+    .hero-grid { grid-template-columns: 1fr !important; }
+    .about-grid { grid-template-columns: 1fr !important; }
+    .plugin-grid { grid-template-columns: 1fr !important; }
+    .nav-links { display: none !important; }
+    .headline { font-size: 44px !important; }
+    .section-pad { padding-left: 24px !important; padding-right: 24px !important; }
+  }
+</style>
+</head>
+<body>
+<div style="display: flex; flex-direction: column; width: 100%; min-height: 100vh; background: oklch(0.17 0.006 60); --accent: oklch(0.78 0.16 68);">
+
+  <!-- NAV -->
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; border-bottom: 1px solid oklch(0.3 0.008 60); background: oklch(0.15 0.006 60);">
+    <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
+      <img src="images/logo.png" alt="Logan Young Audio" style="height: 34px; width: auto;">
+    </a>
+    <div class="nav-links mono" style="display: flex; gap: 36px; font-size: 13px; color: oklch(0.75 0.02 70);">
+      <a href="#plugins" style="color: inherit;">PLUGINS</a>
+      <a href="about.html" style="color: inherit;">ABOUT</a>
+      <a href="contact.html" style="color: inherit;">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="section-pad" style="padding: 96px 48px 80px; background: radial-gradient(1200px 500px at 15% -10%, oklch(0.24 0.02 55 / 0.35), transparent 60%);">
+    <div class="hero-grid" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; max-width: 1200px; margin: 0 auto;">
+
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="mono" style="display: inline-flex; align-self: flex-start; padding: 6px 14px; border: 1px solid var(--accent, oklch(0.78 0.16 68)); color: var(--accent, oklch(0.78 0.16 68)); font-size: 11px;">INDEPENDENT AUDIO SOFTWARE</div>
+        <h1 class="stencil headline" style="margin: 0; font-size: 60px; font-weight: 800; line-height: 1.02; color: oklch(0.96 0.01 70);">TONES THAT FEEL WRONG IN THE RIGHT WAY</h1>
+        <p style="margin: 0; font-size: 18px; line-height: 1.6; color: oklch(0.72 0.02 70); max-width: 46ch;">Founded by guitarist and producer Logan Young, Logan Young Audio builds fast, unapologetic plugins for modern heavy music. No menus. No tweaking paralysis. Just brutal results.</p>
+        <div style="display: flex; gap: 16px; margin-top: 8px;">
+          <a href="#plugins" class="btn-primary">Shop The Plugins</a>
+          <a href="about.html" class="btn-outline">About Logan</a>
+        </div>
+      </div>
+
+      <div style="position: relative;">
+        <div style="position: relative; border: 2px solid oklch(0.4 0.01 60); background: linear-gradient(155deg, oklch(0.28 0.008 60), oklch(0.2 0.006 60)); aspect-ratio: 4 / 5; padding: 3px;">
+          <div class="hazard-edge" style="height: 8px; width: 100%;"></div>
+          <div style="height: calc(100% - 16px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; border: 1px dashed oklch(0.42 0.01 60); margin: 4px;">
+            <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="oklch(0.55 0.01 60)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 3l7 7-2.5 2.5L6 5.5 9 3z"></path>
+              <circle cx="15.5" cy="15.5" r="4.5"></circle>
+              <path d="M12.5 12.5l-6 6"></path>
+            </svg>
+            <div class="mono" style="font-size: 12px; color: oklch(0.55 0.01 60); text-align: center;">[ HERO PHOTO OF LOGAN ]</div>
+          </div>
+          <div class="hazard-edge" style="height: 8px; width: 100%;"></div>
+          <div class="rivet" style="top: 12px; left: 12px;"></div>
+          <div class="rivet" style="top: 12px; right: 12px;"></div>
+          <div class="rivet" style="bottom: 12px; left: 12px;"></div>
+          <div class="rivet" style="bottom: 12px; right: 12px;"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about" class="section-pad" style="padding: 88px 48px; background: oklch(0.15 0.006 60); border-top: 1px solid oklch(0.3 0.008 60); border-bottom: 1px solid oklch(0.3 0.008 60);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div class="mono" style="font-size: 12px; color: var(--accent, oklch(0.78 0.16 68)); margin-bottom: 10px;">THE BUILDER</div>
+      <h2 class="stencil" style="margin: 0 0 40px; font-size: 38px; font-weight: 800; color: oklch(0.94 0.01 70);">ABOUT LOGAN</h2>
+
+      <div class="about-grid" style="display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: start;">
+
+        <div style="position: relative; border: 2px solid oklch(0.4 0.01 60); background: oklch(0.22 0.008 60); aspect-ratio: 1 / 1; padding: 3px;">
+          <div class="hazard-edge" style="height: 7px; width: 100%;"></div>
+          <div style="height: calc(100% - 14px); display: flex; align-items: center; justify-content: center; border: 1px dashed oklch(0.42 0.01 60); margin: 4px;">
+            <div class="mono" style="font-size: 12px; color: oklch(0.55 0.01 60);">[ PHOTO OF LOGAN ]</div>
+          </div>
+          <div class="hazard-edge" style="height: 7px; width: 100%;"></div>
+          <div class="rivet" style="top: 10px; left: 10px;"></div>
+          <div class="rivet" style="top: 10px; right: 10px;"></div>
+          <div class="rivet" style="bottom: 10px; left: 10px;"></div>
+          <div class="rivet" style="bottom: 10px; right: 10px;"></div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 22px;">
+          <p style="margin: 0; font-size: 17px; line-height: 1.7; color: oklch(0.78 0.02 70);">Logan Young is a guitarist and producer — a touring member of metalcore band Reflections and the artist behind the solo project Dal Av. Logan Young Audio grew out of his own rig, not a business plan: tools he built because he needed them for his own sessions, made the way he wished plugins actually worked.</p>
+          <p style="margin: 0; font-size: 17px; line-height: 1.7; color: oklch(0.78 0.02 70);">Every release is designed to be fast, inspiring, and unapologetically creative — built for musicians who want to break the pattern, not follow it. No trend-chasing, no cloning what already exists: just tools Logan uses himself, for players who want to push their tone into new territory.</p>
+
+          <div style="display: flex; align-items: center; gap: 16px; padding: 20px 24px; border-left: 3px solid var(--accent, oklch(0.78 0.16 68)); background: oklch(0.2 0.01 60); margin-top: 8px;">
+            <div class="stencil" style="font-size: 20px; font-style: italic; color: oklch(0.9 0.01 70); line-height: 1.4;">"Sounds that felt wrong in the right way — unstable, aggressive, and alive."</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- PLUGINS -->
+  <div id="plugins" class="section-pad" style="padding: 96px 48px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div class="mono" style="font-size: 12px; color: var(--accent, oklch(0.78 0.16 68)); margin-bottom: 10px;">THE LINEUP</div>
+      <h2 class="stencil" style="margin: 0 0 48px; font-size: 38px; font-weight: 800; color: oklch(0.94 0.01 70);">AVAILABLE NOW</h2>
+
+      <div class="plugin-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+
+        <!-- Plugin 1: The Gross Button -->
+        <div style="display: flex; flex-direction: column; border: 2px solid oklch(0.4 0.01 60); background: oklch(0.19 0.007 60);">
+          <div class="hazard-edge" style="height: 8px; width: 100%;"></div>
+          <a href="the-gross-button.html" style="position: relative; display: block; aspect-ratio: 1 / 1; border-bottom: 1px solid oklch(0.35 0.01 60); background: oklch(0.13 0.008 60); overflow: hidden;">
+            <img src="images/gross-gross.jpg" alt="The Gross Button" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+            <div class="rivet" style="top: 22px; left: 22px;"></div>
+            <div class="rivet" style="top: 22px; right: 22px;"></div>
+          </a>
+          <div style="padding: 28px; display: flex; flex-direction: column; gap: 14px; flex: 1;">
+            <div class="mono" style="font-size: 11px; color: oklch(0.6 0.01 60);">01 / PITCH EFFECT</div>
+            <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+              <h3 class="stencil" style="margin: 0; font-size: 26px; font-weight: 800; color: oklch(0.95 0.01 70);">THE GROSS BUTTON</h3>
+              <div class="mono" style="font-size: 17px; color: var(--accent, oklch(0.78 0.16 68)); white-space: nowrap;">$29.99</div>
+            </div>
+            <p style="margin: 0; font-size: 15px; line-height: 1.65; color: oklch(0.72 0.02 70);">A purpose-built pitch effect for the nasty, dissonant, otherworldly guitar tones heard in modern metal and djent.</p>
+            <a href="the-gross-button.html" class="btn-primary" style="justify-content: center; margin-top: 10px;">View Product Page →</a>
+          </div>
+        </div>
+
+        <!-- Plugin 2: The Buzz Button -->
+        <div style="display: flex; flex-direction: column; border: 2px solid oklch(0.4 0.01 60); background: oklch(0.19 0.007 60);">
+          <div class="hazard-edge" style="height: 8px; width: 100%;"></div>
+          <a href="the-buzz-button.html" style="position: relative; display: block; aspect-ratio: 1 / 1; border-bottom: 1px solid oklch(0.35 0.01 60); background: oklch(0.13 0.008 60); overflow: hidden;">
+            <img src="images/buzz-drone.jpg" alt="The Buzz Button" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+            <div class="rivet" style="top: 22px; left: 22px;"></div>
+            <div class="rivet" style="top: 22px; right: 22px;"></div>
+          </a>
+          <div style="padding: 28px; display: flex; flex-direction: column; gap: 14px; flex: 1;">
+            <div class="mono" style="font-size: 11px; color: oklch(0.6 0.01 60);">02 / FUZZ + OCTAVE</div>
+            <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+              <h3 class="stencil" style="margin: 0; font-size: 26px; font-weight: 800; color: oklch(0.95 0.01 70);">THE BUZZ BUTTON</h3>
+              <div class="mono" style="font-size: 17px; color: var(--accent, oklch(0.78 0.16 68)); white-space: nowrap;">$29.99</div>
+            </div>
+            <p style="margin: 0; font-size: 15px; line-height: 1.65; color: oklch(0.72 0.02 70);">Simple controls, massive sounds — a three-mode fuzz that blends a crushing low octave straight into your tone.</p>
+            <a href="the-buzz-button.html" class="btn-primary" style="justify-content: center; margin-top: 10px;">View Product Page →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="margin-top: auto; padding: 40px 48px 24px; border-top: 1px solid oklch(0.3 0.008 60); background: oklch(0.14 0.005 60);">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+      <img src="images/logo.png" alt="Logan Young Audio" style="height: 22px; width: auto; opacity: 0.92;">
+      <div class="mono" style="display: flex; gap: 28px; font-size: 11px; color: oklch(0.55 0.01 60);">
+        <a href="index.html" style="color: inherit;">HOME</a>
+        <a href="#plugins" style="color: inherit;">PLUGINS</a>
+        <a href="about.html" style="color: inherit;">ABOUT</a>
+        <a href="contact.html" style="color: inherit;">CONTACT</a>
+      </div>
+      <div class="mono" style="font-size: 11px; color: oklch(0.45 0.008 60);">© 2026 LOGAN YOUNG AUDIO</div>
+    </div>
+    <div class="mono" style="max-width: 1200px; margin: 16px auto 0; text-align: center; font-size: 10px; color: oklch(0.45 0.008 60);">POWERED BY <a href="https://www.ablazeaudio.com/" style="color: var(--accent, oklch(0.78 0.16 68));">ABLAZE</a></div>
+  </div>
+
+</div>
+</body>
+</html>

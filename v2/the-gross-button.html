@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Gross Button — Logan Young Audio</title>
+<meta name="description" content="A purpose-built pitch effect for nasty, dissonant, otherworldly guitar tones. No menus. No tweaking paralysis. Just brutal results.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@400..900&family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+    background: oklch(0.17 0.006 60);
+    color: oklch(0.92 0.01 70);
+  }
+  a { color: var(--accent, oklch(0.78 0.16 68)); text-decoration: none; }
+  a:hover { color: oklch(0.85 0.14 68); }
+  .stencil {
+    font-family: 'Big Shoulders Stencil', 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .mono {
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .rivet {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, oklch(0.55 0.01 60), oklch(0.2 0.006 60) 70%);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.6), inset 0 0 1px rgba(255,255,255,0.15);
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px 32px;
+    background: var(--accent, oklch(0.78 0.16 68));
+    color: oklch(0.14 0.01 60);
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 15px;
+    border: none;
+    box-shadow: 0 4px 0 oklch(0.46 0.11 68), 0 4px 10px rgba(0,0,0,0.4);
+  }
+  .hazard-edge {
+    background-image: repeating-linear-gradient(135deg, var(--accent, oklch(0.78 0.16 68)) 0 14px, oklch(0.14 0.01 60) 14px 28px);
+  }
+  .spec-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    border: 1px solid oklch(0.4 0.01 60);
+    color: oklch(0.72 0.02 70);
+  }
+  .mode-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px;
+    border: 1px solid oklch(0.35 0.01 60);
+    background: oklch(0.2 0.008 60);
+  }
+  .gallery-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background: oklch(0.4 0.01 60);
+  }
+  @media (max-width: 720px) {
+    .product-grid { grid-template-columns: 1fr !important; }
+    .mode-grid { grid-template-columns: 1fr !important; }
+    .section-pad { padding-left: 24px !important; padding-right: 24px !important; }
+    .title-size { font-size: 34px !important; }
+  }
+</style>
+</head>
+<body>
+<div style="display: flex; flex-direction: column; width: 100%; min-height: 100vh; background: oklch(0.17 0.006 60); --accent: oklch(0.78 0.16 68);">
+
+  <!-- NAV -->
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; border-bottom: 1px solid oklch(0.3 0.008 60); background: oklch(0.15 0.006 60);">
+    <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
+      <img src="images/logo.png" alt="Logan Young Audio" style="height: 34px; width: auto;">
+    </a>
+    <div class="mono" style="display: flex; gap: 36px; font-size: 13px; color: oklch(0.75 0.02 70);">
+      <a href="index.html" style="color: inherit;">HOME</a>
+      <a href="index.html#plugins" style="color: inherit;">PLUGINS</a>
+      <a href="about.html" style="color: inherit;">ABOUT</a>
+      <a href="contact.html" style="color: inherit;">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <div class="section-pad mono" style="padding: 18px 48px 0; font-size: 11px; color: oklch(0.5 0.01 60); max-width: 1200px; margin: 0 auto; width: 100%;">
+    <a href="index.html" style="color: inherit;">HOME</a> <span style="opacity:0.5;">/</span> <a href="index.html#plugins" style="color: inherit;">PLUGINS</a> <span style="opacity:0.5;">/</span> <span style="color: var(--accent, oklch(0.78 0.16 68));">THE GROSS BUTTON</span>
+  </div>
+
+  <!-- VIDEO -->
+  <div class="section-pad" style="padding: 32px 48px 72px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div class="mono" style="font-size: 12px; color: var(--accent, oklch(0.78 0.16 68)); margin-bottom: 10px;">DEMO</div>
+      <h2 class="stencil" style="margin: 0 0 28px; font-size: 30px; font-weight: 800; color: oklch(0.94 0.01 70);">SEE IT IN ACTION</h2>
+      <div style="position: relative; border: 2px solid oklch(0.4 0.01 60); background: oklch(0.22 0.01 60); aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center;">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="oklch(0.6 0.01 60)" stroke-width="1.4">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M10 8l6 4-6 4V8z" fill="oklch(0.6 0.01 60)" stroke="none"></path>
+        </svg>
+        <div class="mono" style="position: absolute; bottom: 20px; font-size: 12px; color: oklch(0.55 0.01 60);">[ PRODUCT DEMO VIDEO ]</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT HERO -->
+  <div class="section-pad" style="padding: 0 48px 80px;">
+    <div class="product-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; max-width: 1200px; margin: 0 auto;">
+
+      <!-- Gallery: auto-scroller between the 3 box renders -->
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="position: relative; border: 2px solid oklch(0.4 0.01 60); aspect-ratio: 1 / 1; overflow: hidden;">
+          <div id="galleryTrack" style="display: flex; width: 300%; height: 100%; transform: translateX(0%); transition: transform 0.7s cubic-bezier(0.65,0,0.35,1);">
+            <img src="images/gross-gross.jpg" alt="The Gross Button, Gross scene" style="width: 33.3334%; height: 100%; object-fit: cover; display: block; flex-shrink: 0;">
+            <img src="images/gross-disgust.jpg" alt="The Gross Button, Disgust scene" style="width: 33.3334%; height: 100%; object-fit: cover; display: block; flex-shrink: 0;">
+            <img src="images/gross-putrid.jpg" alt="The Gross Button, Putrid scene" style="width: 33.3334%; height: 100%; object-fit: cover; display: block; flex-shrink: 0;">
+          </div>
+          <div class="rivet" style="top: 10px; left: 10px;"></div>
+          <div class="rivet" style="top: 10px; right: 10px;"></div>
+          <div class="rivet" style="bottom: 10px; left: 10px;"></div>
+          <div class="rivet" style="bottom: 10px; right: 10px;"></div>
+          <button id="galleryPrev" aria-label="Previous image" style="position: absolute; top: 50%; left: 12px; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; border: 1px solid oklch(0.55 0.01 60); background: oklch(0.1 0.006 60 / 0.55); color: oklch(0.94 0.01 70); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 18px; line-height: 1;">‹</button>
+          <button id="galleryNext" aria-label="Next image" style="position: absolute; top: 50%; right: 12px; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; border: 1px solid oklch(0.55 0.01 60); background: oklch(0.1 0.006 60 / 0.55); color: oklch(0.94 0.01 70); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 18px; line-height: 1;">›</button>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 14px;">
+          <div class="mono" id="galleryLabel" style="font-size: 11px; color: oklch(0.55 0.01 60);">GROSS — 1 / 3</div>
+          <div style="display: flex; gap: 8px;">
+            <button class="gallery-dot" data-index="0" aria-label="GROSS"></button>
+            <button class="gallery-dot" data-index="1" aria-label="DISGUST"></button>
+            <button class="gallery-dot" data-index="2" aria-label="PUTRID"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div class="mono" style="font-size: 11px; color: oklch(0.6 0.01 60);">01 / PITCH EFFECT</div>
+        <h1 class="stencil title-size" style="margin: 0; font-size: 46px; font-weight: 800; line-height: 1.02; color: oklch(0.96 0.01 70);">THE GROSS BUTTON</h1>
+        <p style="margin: 0; font-size: 17px; line-height: 1.5; color: oklch(0.85 0.02 70); font-weight: 500;">No menus. No tweaking paralysis. Just brutal results.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 1.7; color: oklch(0.75 0.02 70);">A purpose-built pitch effect for the nasty, dissonant, otherworldly guitar tones heard in modern metal, djent, and progressive heavy music. Built to sit at the very start of your signal chain, The Gross Button affects your guitar DI before it hits your amp sim, delivering tight, unstable, "how-is-this-even-legal" tones that cut through dense mixes.</p>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; padding: 20px; border: 1px solid oklch(0.35 0.01 60); background: oklch(0.2 0.008 60);">
+          <div class="mono" style="font-size: 11px; color: oklch(0.6 0.01 60); margin-bottom: 4px;">TWO CONTROLS</div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <span class="spec-tag">Nuke — input gain</span>
+            <span class="spec-tag">Sicken — wet / dry mix</span>
+          </div>
+        </div>
+
+        <a href="#buy" class="mono" style="display: inline-flex; align-items: center; gap: 8px; color: var(--accent, oklch(0.78 0.16 68)); font-size: 12px; margin-top: 4px;">$29.99 — Purchase Details Below ↓</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- THREE SCENES -->
+  <div class="section-pad" style="padding: 0 48px 88px; background: oklch(0.15 0.006 60); border-top: 1px solid oklch(0.3 0.008 60); border-bottom: 1px solid oklch(0.3 0.008 60);">
+    <div style="max-width: 1200px; margin: 0 auto; padding-top: 64px;">
+      <div class="mono" style="font-size: 12px; color: var(--accent, oklch(0.78 0.16 68)); margin-bottom: 10px;">THREE SCENES</div>
+      <h2 class="stencil" style="margin: 0 0 36px; font-size: 32px; font-weight: 800; color: oklch(0.94 0.01 70);">PICK YOUR POISON</h2>
+      <div class="mode-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+
+        <div class="mode-card">
+          <img src="images/gross-gross.jpg" alt="Gross scene" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;">
+          <h3 class="stencil" style="margin: 0; font-size: 22px; font-weight: 800; color: oklch(0.95 0.01 70);">GROSS</h3>
+          <div class="mono" style="font-size: 11px; color: var(--accent, oklch(0.78 0.16 68));">BRIGHT, TENSE</div>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: oklch(0.72 0.02 70);">The most controlled of the three scenes — bright and tense without losing definition.</p>
+        </div>
+
+        <div class="mode-card">
+          <img src="images/gross-disgust.jpg" alt="Disgust scene" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;">
+          <h3 class="stencil" style="margin: 0; font-size: 22px; font-weight: 800; color: oklch(0.95 0.01 70);">DISGUST</h3>
+          <div class="mono" style="font-size: 11px; color: var(--accent, oklch(0.78 0.16 68));">DARKER, HEAVIER</div>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: oklch(0.72 0.02 70);">A darker, heavier take — pushes the dissonance further for riffs that need extra weight.</p>
+        </div>
+
+        <div class="mode-card">
+          <img src="images/gross-putrid.jpg" alt="Putrid scene" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;">
+          <h3 class="stencil" style="margin: 0; font-size: 22px; font-weight: 800; color: oklch(0.95 0.01 70);">PUTRID</h3>
+          <div class="mono" style="font-size: 11px; color: var(--accent, oklch(0.78 0.16 68));">MAXIMUM CHAOS</div>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: oklch(0.72 0.02 70);">Maximum chaos — the most extreme setting in The Gross Button.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- NUKE & SICKEN -->
+  <div class="section-pad" style="padding: 88px 48px 96px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div class="mono" style="font-size: 12px; color: var(--accent, oklch(0.78 0.16 68)); margin-bottom: 10px;">THE TWO CONTROLS</div>
+      <h2 class="stencil" style="margin: 0 0 12px; font-size: 32px; font-weight: 800; color: oklch(0.94 0.01 70);">NUKE &amp; SICKEN</h2>
+      <p style="margin: 0 0 36px; font-size: 15px; line-height: 1.6; color: oklch(0.68 0.02 70); max-width: 70ch;">Drop it at the start of your chain, pick a scene, then turn Nuke &amp; Sicken until it feels illegal.</p>
+
+      <!-- Video demo: spans full width, above both columns -->
+      <div style="position: relative; border: 2px solid oklch(0.4 0.01 60); background: oklch(0.22 0.01 60); aspect-ratio: 21 / 9; display: flex; align-items: center; justify-content: center; margin-bottom: 40px;">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="oklch(0.6 0.01 60)" stroke-width="1.4">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M10 8l6 4-6 4V8z" fill="oklch(0.6 0.01 60)" stroke="none"></path>
+        </svg>
+        <div class="mono" style="position: absolute; bottom: 18px; font-size: 11px; color: oklch(0.55 0.01 60);">[ NUKE & SICKEN DEMO ]</div>
+      </div>
+
+      <div class="product-grid" style="display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 40px; align-items: start;">
+
+        <!-- Media: product image -->
+        <div style="position: relative; border: 2px solid oklch(0.4 0.01 60); aspect-ratio: 1 / 1; overflow: hidden;">
+          <img src="images/nuke-sicken.jpg" alt="The Gross Button, Nuke and Sicken knobs" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <div class="rivet" style="top: 10px; left: 10px;"></div>
+          <div class="rivet" style="top: 10px; right: 10px;"></div>
+          <div class="rivet" style="bottom: 10px; left: 10px;"></div>
+          <div class="rivet" style="bottom: 10px; right: 10px;"></div>
+        </div>
+
+        <!-- Controls: stacked -->
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+
+          <div class="mode-card">
+            <svg width="52" height="52" viewBox="0 0 56 56" fill="none">
+              <circle cx="28" cy="28" r="24" fill="oklch(0.22 0.01 60)" stroke="var(--accent, oklch(0.78 0.16 68))" stroke-width="2"></circle>
+              <line x1="28" y1="28" x2="28" y2="9" stroke="var(--accent, oklch(0.78 0.16 68))" stroke-width="3" stroke-linecap="round"></line>
+              <circle cx="28" cy="28" r="3.5" fill="var(--accent, oklch(0.78 0.16 68))"></circle>
+            </svg>
+            <h3 class="stencil" style="margin: 0; font-size: 22px; font-weight: 800; color: oklch(0.95 0.01 70);">NUKE</h3>
+            <div class="mono" style="font-size: 11px; color: var(--accent, oklch(0.78 0.16 68));">INPUT GAIN</div>
+            <p style="margin: 0; font-size: 14px; line-height: 1.6; color: oklch(0.72 0.02 70);">Controls how hard your guitar DI hits the pitch engine. Turning up Nuke pushes the input signal harder before pitch shifting, increasing aggression, instability, and harmonic chaos.</p>
+            <p style="margin: 0; font-size: 14px; line-height: 1.6; color: oklch(0.6 0.01 60);">Great for dialing in how violent the effect reacts to your playing — from subtle tension to full meltdown.</p>
+          </div>
+
+          <div class="mode-card">
+            <svg width="52" height="52" viewBox="0 0 56 56" fill="none">
+              <circle cx="28" cy="28" r="24" fill="oklch(0.22 0.01 60)" stroke="var(--accent, oklch(0.78 0.16 68))" stroke-width="2"></circle>
+              <line x1="28" y1="28" x2="41" y2="39" stroke="var(--accent, oklch(0.78 0.16 68))" stroke-width="3" stroke-linecap="round"></line>
+              <circle cx="28" cy="28" r="3.5" fill="var(--accent, oklch(0.78 0.16 68))"></circle>
+            </svg>
+            <h3 class="stencil" style="margin: 0; font-size: 22px; font-weight: 800; color: oklch(0.95 0.01 70);">SICKEN</h3>
+            <div class="mono" style="font-size: 11px; color: var(--accent, oklch(0.78 0.16 68));">WET SIGNAL MIX</div>
+            <p style="margin: 0; font-size: 14px; line-height: 1.6; color: oklch(0.72 0.02 70);">Blends the effected signal with your dry tone. Lower settings keep things controlled and usable, while higher settings fully embrace the dissonance.</p>
+            <p style="margin: 0; font-size: 14px; line-height: 1.6; color: oklch(0.6 0.01 60);">Perfect for automation, transitions, and finding the exact balance between clarity and absolute grossness.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUY -->
+  <div id="buy" class="section-pad" style="padding: 96px 48px; display: flex; justify-content: center;">
+    <div style="max-width: 720px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 22px;">
+      <div class="mono" style="font-size: 12px; color: var(--accent, oklch(0.78 0.16 68));">GET IT NOW</div>
+      <h2 class="stencil" style="margin: 0; font-size: 36px; font-weight: 800; color: oklch(0.95 0.01 70);">THE GROSS BUTTON</h2>
+      <div class="stencil" style="font-size: 44px; font-weight: 800; color: var(--accent, oklch(0.78 0.16 68));">$29.99</div>
+
+      <div style="display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; padding: 20px 28px; border: 1px solid oklch(0.35 0.01 60); background: oklch(0.2 0.008 60);">
+        <div class="mono" style="font-size: 11px; color: oklch(0.55 0.01 60); text-align: left;">FORMAT<br><span style="color: oklch(0.85 0.02 70);">VST · AU · AAX</span></div>
+        <div class="mono" style="font-size: 11px; color: oklch(0.55 0.01 60); text-align: left;">SYSTEM<br><span style="color: oklch(0.85 0.02 70);">macOS 10.13+ · Win 10+</span></div>
+        <div class="mono" style="font-size: 11px; color: oklch(0.55 0.01 60); text-align: left;">LICENSE<br><span style="color: oklch(0.85 0.02 70);">2 device activations</span></div>
+      </div>
+
+      <a href="#" class="btn-primary" style="padding: 20px 48px; font-size: 16px;">Add To Cart — $29.99</a>
+
+      <div class="mono" style="font-size: 10px; color: oklch(0.5 0.01 60); margin-top: 4px;">POWERED BY <a href="https://www.ablazeaudio.com/" style="color: var(--accent, oklch(0.78 0.16 68));">ABLAZE</a></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="margin-top: auto; padding: 40px 48px; border-top: 1px solid oklch(0.3 0.008 60); background: oklch(0.14 0.005 60);">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+      <img src="images/logo.png" alt="Logan Young Audio" style="height: 22px; width: auto; opacity: 0.92;">
+      <div class="mono" style="display: flex; gap: 28px; font-size: 11px; color: oklch(0.55 0.01 60);">
+        <a href="index.html" style="color: inherit;">HOME</a>
+        <a href="index.html#plugins" style="color: inherit;">PLUGINS</a>
+        <a href="about.html" style="color: inherit;">ABOUT</a>
+        <a href="contact.html" style="color: inherit;">CONTACT</a>
+      </div>
+      <div class="mono" style="font-size: 11px; color: oklch(0.45 0.008 60);">© 2026 LOGAN YOUNG AUDIO</div>
+    </div>
+  </div>
+
+</div>
+<script>
+(function () {
+  var LABELS = ['GROSS', 'DISGUST', 'PUTRID'];
+  var ACCENT = 'oklch(0.78 0.16 68)';
+  var INACTIVE = 'oklch(0.4 0.01 60)';
+  var track = document.getElementById('galleryTrack');
+  var labelEl = document.getElementById('galleryLabel');
+  var dots = Array.prototype.slice.call(document.querySelectorAll('.gallery-dot'));
+  var prevBtn = document.getElementById('galleryPrev');
+  var nextBtn = document.getElementById('galleryNext');
+  var n = LABELS.length;
+  var idx = 0;
+  var timer = null;
+
+  function render() {
+    track.style.transform = 'translateX(' + (-(idx * 100 / n)).toFixed(4) + '%)';
+    labelEl.textContent = LABELS[idx] + ' — ' + (idx + 1) + ' / ' + n;
+    dots.forEach(function (d, i) {
+      d.style.background = i === idx ? ACCENT : INACTIVE;
+    });
+  }
+  function stopAutoplay() {
+    if (timer) { clearInterval(timer); timer = null; }
+  }
+  function startAutoplay() {
+    stopAutoplay();
+    timer = setInterval(function () {
+      idx = (idx + 1) % n;
+      render();
+    }, 3000);
+  }
+  function goTo(i) {
+    idx = ((i % n) + n) % n;
+    render();
+    startAutoplay();
+  }
+
+  prevBtn.addEventListener('click', function () { goTo(idx - 1); });
+  nextBtn.addEventListener('click', function () { goTo(idx + 1); });
+  dots.forEach(function (d) {
+    d.addEventListener('click', function () { goTo(parseInt(d.dataset.index, 10)); });
+  });
+
+  render();
+  startAutoplay();
+})();
+</script>
+</body>
+</html>

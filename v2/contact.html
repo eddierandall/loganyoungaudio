@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Logan Young Audio</title>
+<meta name="description" content="Questions about a plugin, an order, or something else entirely — reach out to Logan Young Audio.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@400..900&family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+    background: oklch(0.17 0.006 60);
+    color: oklch(0.92 0.01 70);
+  }
+  a { color: var(--accent, oklch(0.78 0.16 68)); text-decoration: none; }
+  a:hover { color: oklch(0.85 0.14 68); }
+  .stencil {
+    font-family: 'Big Shoulders Stencil', 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .mono {
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .hazard-edge {
+    background-image: repeating-linear-gradient(135deg, var(--accent, oklch(0.78 0.16 68)) 0 14px, oklch(0.14 0.01 60) 14px 28px);
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 30px;
+    background: var(--accent, oklch(0.78 0.16 68));
+    color: oklch(0.14 0.01 60);
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: none;
+    box-shadow: 0 4px 0 oklch(0.46 0.11 68), 0 4px 10px rgba(0,0,0,0.4);
+    cursor: pointer;
+  }
+  .field-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: oklch(0.65 0.01 60);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .field-input {
+    width: 100%;
+    background: oklch(0.13 0.008 60);
+    border: 1px solid oklch(0.4 0.01 60);
+    color: oklch(0.9 0.01 70);
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    padding: 14px 16px;
+    outline: none;
+  }
+  .field-input:focus {
+    border-color: var(--accent, oklch(0.78 0.16 68));
+  }
+  textarea.field-input {
+    resize: vertical;
+    min-height: 130px;
+    font-family: 'Oswald', sans-serif;
+  }
+  #form-status { display: none; }
+  #form-status.visible { display: block; }
+  @media (max-width: 720px) {
+    .section-pad { padding-left: 24px !important; padding-right: 24px !important; }
+    .title-size { font-size: 34px !important; }
+  }
+</style>
+</head>
+<body>
+<div style="display: flex; flex-direction: column; width: 100%; min-height: 100vh; background: oklch(0.17 0.006 60); --accent: oklch(0.78 0.16 68);">
+
+  <!-- NAV -->
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; border-bottom: 1px solid oklch(0.3 0.008 60); background: oklch(0.15 0.006 60);">
+    <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
+      <img src="images/logo.png" alt="Logan Young Audio" style="height: 34px; width: auto;">
+    </a>
+    <div class="mono" style="display: flex; gap: 36px; font-size: 13px; color: oklch(0.75 0.02 70);">
+      <a href="index.html" style="color: inherit;">HOME</a>
+      <a href="index.html#plugins" style="color: inherit;">PLUGINS</a>
+      <a href="about.html" style="color: inherit;">ABOUT</a>
+      <a href="contact.html" style="color: var(--accent, oklch(0.78 0.16 68));">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <div class="section-pad mono" style="padding: 18px 48px 0; font-size: 11px; color: oklch(0.5 0.01 60); max-width: 1200px; margin: 0 auto; width: 100%;">
+    <a href="index.html" style="color: inherit;">HOME</a> <span style="opacity:0.5;">/</span> <span style="color: var(--accent, oklch(0.78 0.16 68));">CONTACT</span>
+  </div>
+
+  <!-- HEADER -->
+  <div class="section-pad" style="padding: 40px 48px 8px;">
+    <div style="max-width: 720px; margin: 0 auto;">
+      <div class="mono" style="font-size: 12px; color: var(--accent, oklch(0.78 0.16 68)); margin-bottom: 14px;">GET IN TOUCH</div>
+      <h1 class="stencil title-size" style="margin: 0 0 16px; font-size: 42px; font-weight: 800; color: oklch(0.96 0.01 70);">CONTACT</h1>
+      <p style="margin: 0; font-size: 16px; line-height: 1.6; color: oklch(0.72 0.02 70);">Questions about a plugin, an order, or something else entirely — reach out below.</p>
+      <p style="margin: 16px 0 0; font-size: 14px; line-height: 1.6; color: oklch(0.65 0.01 60);">For technical support or general questions, email <a href="mailto:loganyoungaudio@gmail.com">loganyoungaudio@gmail.com</a> directly.</p>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div class="section-pad" style="padding: 40px 48px 96px;">
+    <div style="max-width: 720px; margin: 0 auto; border: 2px solid oklch(0.4 0.01 60); background: oklch(0.19 0.007 60);">
+      <div class="hazard-edge" style="height: 7px; width: 100%;"></div>
+      <!--
+        NOTE FOR INTEGRATION: this is a real, working <form> element (name/email/phone/comment),
+        but it has no backend attached yet. Point its `action` at wherever form submissions should
+        go — e.g. Shopify's built-in contact form endpoint once this is on loganyoungmusic.com/Shopify
+        (action="/contact#ContactFooter" with name="contact[name]" etc.), or a form service like
+        Formspree/Getform if this is hosted outside Shopify. Right now submit is intercepted by the
+        script at the bottom and just shows a "thanks" message without sending anything anywhere.
+      -->
+      <form id="contact-form" style="padding: 40px; display: flex; flex-direction: column; gap: 24px;">
+
+        <div>
+          <label class="field-label" for="cf-name">Name</label>
+          <input class="field-input" type="text" id="cf-name" name="name" placeholder="Jane Smith" autocomplete="name">
+        </div>
+
+        <div>
+          <label class="field-label" for="cf-email">Email *</label>
+          <input class="field-input" type="email" id="cf-email" name="email" placeholder="jane@email.com" autocomplete="email" required>
+        </div>
+
+        <div>
+          <label class="field-label" for="cf-phone">Phone</label>
+          <input class="field-input" type="tel" id="cf-phone" name="phone" placeholder="(optional)" autocomplete="tel">
+        </div>
+
+        <div>
+          <label class="field-label" for="cf-comment">Comment</label>
+          <textarea class="field-input" id="cf-comment" name="comment" placeholder="How can we help?" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" style="align-self: flex-start; margin-top: 8px;">Send Message</button>
+
+        <p id="form-status" class="mono" style="font-size: 12px; color: var(--accent, oklch(0.78 0.16 68)); margin: 0;">Thanks — your message has been noted. (Hook this form up to an endpoint to actually deliver it.)</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="margin-top: auto; padding: 40px 48px 24px; border-top: 1px solid oklch(0.3 0.008 60); background: oklch(0.14 0.005 60);">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+      <img src="images/logo.png" alt="Logan Young Audio" style="height: 22px; width: auto; opacity: 0.92;">
+      <div class="mono" style="display: flex; gap: 28px; font-size: 11px; color: oklch(0.55 0.01 60);">
+        <a href="index.html" style="color: inherit;">HOME</a>
+        <a href="index.html#plugins" style="color: inherit;">PLUGINS</a>
+        <a href="about.html" style="color: inherit;">ABOUT</a>
+        <a href="contact.html" style="color: inherit;">CONTACT</a>
+      </div>
+      <div class="mono" style="font-size: 11px; color: oklch(0.45 0.008 60);">© 2026 LOGAN YOUNG AUDIO</div>
+    </div>
+    <div class="mono" style="max-width: 1200px; margin: 16px auto 0; text-align: center; font-size: 10px; color: oklch(0.45 0.008 60);">POWERED BY <a href="https://www.ablazeaudio.com/" style="color: var(--accent, oklch(0.78 0.16 68));">ABLAZE</a></div>
+  </div>
+
+</div>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('form-status').classList.add('visible');
+  });
+</script>
+</body>
+</html>
