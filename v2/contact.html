@@ -22,9 +22,9 @@
 
   <!-- HEADER -->
   <div style="padding: 64px 40px 40px; text-align: center;">
-    <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: #1c64c9; margin-bottom: 10px;">GET IN TOUCH</div>
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: #e0a030; margin-bottom: 10px;">GET IN TOUCH</div>
     <h1 style="margin: 0 0 16px; font-size: 34px; font-weight: 800; color: #ffffff;">Contact</h1>
-    <p style="margin: 0 auto; max-width: 520px; font-size: 15px; line-height: 1.7; color: #b0b0b0;">Questions about a plugin, an order, or something else entirely — reach out below.</p>
+    <p style="margin: 0 auto; max-width: 520px; font-size: 15px; line-height: 1.7; color: #b0b0b0;">Questions about a plugin, an order, or something else entirely, reach out below.</p>
     <p style="margin: 16px auto 0; max-width: 520px; font-size: 13px; line-height: 1.7; color: #888888;">For technical support or general questions, email <a href="mailto:loganyoungaudio@gmail.com" style="color: #1c64c9; text-decoration: underline;">loganyoungaudio@gmail.com</a> directly.</p>
   </div>
 
@@ -32,23 +32,14 @@
   <div style="padding: 24px 40px 96px;">
     <div style="max-width: 600px; margin: 0 auto; border: 1px solid #1e1e1e; background: #0a0a0a; border-radius: 8px;">
       <div style="padding: 40px; display: flex; flex-direction: column; gap: 22px;">
-
-        <!--
-          NOTE FOR INTEGRATION: this is a real, working <form> element (name/email/phone/comment),
-          but it has no backend attached yet. Point its `action` at wherever form submissions should
-          go — e.g. Shopify's built-in contact form endpoint once this is on the live Shopify site
-          (action="/contact#ContactFooter" with name="contact[name]" etc.), or a form service like
-          Formspree/Getform if this is hosted outside Shopify. Right now submit is intercepted by the
-          script at the bottom and just shows a "thanks" message without sending anything anywhere.
-        -->
         <div>
           <label class="field-label">Name</label>
-          <input class="field-input" type="text" placeholder="Jane Smith">
+          <input class="field-input" type="text" placeholder="Logan Young">
         </div>
 
         <div>
           <label class="field-label">Email *</label>
-          <input class="field-input" type="email" placeholder="jane@email.com">
+          <input class="field-input" type="email" placeholder="loganyoungaudio@gmail.com">
         </div>
 
         <div>
@@ -58,11 +49,11 @@
 
         <div>
           <label class="field-label">Comment</label>
-          <textarea class="field-input" placeholder="How can we help?"></textarea>
+          <textarea class="field-input" placeholder="Hit us up!"></textarea>
         </div>
 
         <button class="btn-blue" style="align-self: flex-start; margin-top: 8px;" id="contact-submit">Send Message</button>
-        <p id="form-status" style="font-size: 13px; color: #1c64c9; margin: 0;">Thanks — your message has been noted. (Hook this form up to an endpoint to actually deliver it.)</p>
+        <p id="form-status" style="font-size: 13px; color: #1c64c9; margin: 0;">Thanks your message has been sent</p>
       </div>
     </div>
   </div>
