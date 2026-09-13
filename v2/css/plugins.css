@@ -23,5 +23,5 @@ a { color: inherit; text-decoration: none; }
 .product-tile:hover img { opacity: 0.92; }
 @media (max-width: 760px) {
   .tile-grid { grid-template-columns: 1fr !important; }
-  .nav-links { display: none !important; }
+  .nav-links { flex-wrap: wrap; }
 }
